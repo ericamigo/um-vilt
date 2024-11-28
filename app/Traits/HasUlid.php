@@ -13,7 +13,7 @@ trait HasUlid
         });
     }
 
-    public function getRouteKeyName()
+    public function getRouteKeyName(): string
     {
         return 'ulid';
     }
