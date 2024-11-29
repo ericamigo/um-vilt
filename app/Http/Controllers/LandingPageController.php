@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\BranchResource;
 use App\Models\Branch;
+use App\Models\User;
 
 class LandingPageController extends Controller
 {
     public function __invoke()
     {
+        dd(
+            User::first()->role,
+            User::first()->is_active,
+        );
         $branches = Branch::query()
             ->withCount([
                 'campuses',
