@@ -13,8 +13,9 @@ class LandingPageController extends Controller
         $student = Auth::user()->student
             ->load([
                 'user',
-                'course',
+                'course.college.campus.branch',
             ]);
+
         dd(
             $student->toArray(),
             Auth::user()?->employee?->toArray(),
