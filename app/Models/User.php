@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Traits\HasUlid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -47,5 +48,18 @@ class User extends Authenticatable
         return [
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Relationship Methods
+     */
+    public function employee(): HasOne
+    {
+        return $this->hasOne(Employee::class);
+    }
+
+    public function student(): HasOne
+    {
+        return $this->hasOne(Student::class);
     }
 }
