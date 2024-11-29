@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -40,7 +39,7 @@ class HandleInertiaRequests extends Middleware
                                 $notifications
                                     ->latest()
                                     ->limit(10);
-                            }
+                            },
                         ])
                     : null,
             ],

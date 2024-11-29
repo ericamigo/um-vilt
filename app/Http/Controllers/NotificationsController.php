@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -39,7 +38,6 @@ class NotificationsController extends Controller
         } else {
             $notification->markAsRead();
         }
-
 
         return Redirect::back();
     }

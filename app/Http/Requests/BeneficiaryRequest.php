@@ -26,7 +26,7 @@ class BeneficiaryRequest extends FormRequest
                     Rule::unique(Beneficiary::class)
                         ->where(function ($query) {
                             $query->where('waiver_id', $this->route('waiver')->id);
-                        })
+                        }),
                 ],
             'relationship' => [
                 'required',

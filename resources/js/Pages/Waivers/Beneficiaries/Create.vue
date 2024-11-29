@@ -23,7 +23,7 @@ function submit() {
         {
             preserveScroll: true,
             onSuccess: () => form.reset(),
-        }
+        },
     );
 }
 </script>

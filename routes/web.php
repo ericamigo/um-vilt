@@ -9,7 +9,6 @@ use App\Http\Controllers\WaiversController;
 use App\Http\Controllers\WaiverSubmitForApprovalController;
 use App\Http\Middleware\EmployeeSection;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 Route::get('/', LandingPageController::class);
 

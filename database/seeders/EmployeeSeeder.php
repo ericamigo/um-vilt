@@ -7,7 +7,6 @@ use App\Models\Campus;
 use App\Models\Employee;
 use App\Models\Student;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class EmployeeSeeder extends Seeder

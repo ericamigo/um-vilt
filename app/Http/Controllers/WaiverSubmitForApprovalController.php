@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Enums\Statuses\WaiverStatus;
-use App\Models\Employee;
 use App\Models\User;
 use App\Models\Waiver;
 use App\Notifications\WaiverSubmittedForApprovalNotification;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Redirect;
 

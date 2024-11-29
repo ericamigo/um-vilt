@@ -6,7 +6,6 @@ use App\Http\Requests\BeneficiaryRequest;
 use App\Models\Beneficiary;
 use App\Models\Waiver;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class WaiverBeneficiariesController extends Controller
