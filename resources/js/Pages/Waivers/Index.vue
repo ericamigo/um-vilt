@@ -20,13 +20,30 @@ defineProps({
                     </div>
                 </div>
                 <Card>
-                    <template v-for="waiver in waivers" :key="waiver.id">
+                    <template v-for="waiver in waivers.data" :key="waiver.id">
                         <CardBody
                             class="border-t border-gray-200 dark:border-gray-700 first:border-t-0"
                         >
-                            <Link :href="`/waivers/${waiver.id}`">
-                                {{ waiver }}
-                            </Link>
+                            <div class="flex gap-6">
+                                <div class="grow">
+                                    <div>
+                                        <Link
+                                            :href="`/waivers/${waiver.id}`"
+                                            class="font-bold hover:underline"
+                                        >
+                                            {{ waiver.year }} |
+                                            {{ waiver.semester.name }}
+                                        </Link>
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        {{ waiver.beneficiaries_count }}
+                                        Beneficiaries
+                                    </div>
+                                </div>
+                                <div>
+                                    {{ waiver.status }}
+                                </div>
+                            </div>
                         </CardBody>
                     </template>
                 </Card>

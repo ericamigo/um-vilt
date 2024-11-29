@@ -11,6 +11,7 @@ class StudentResource extends JsonResource
     {
         return [
             'id' => $this->ulid,
+            'user' => UserResource::make($this->whenLoaded('user')),
         ];
     }
 }

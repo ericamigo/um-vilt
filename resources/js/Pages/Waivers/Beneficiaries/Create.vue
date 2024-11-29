@@ -61,10 +61,11 @@ function submit() {
                 <div>
                     <button
                         type="submit"
-                        class="p-4 bg-green-500 font-bold disabled:opacity-50"
+                        class="py-2 px-4 rounded-lg bg-indigo-500 flex gap-2.5 disabled:opacity-50"
                         :disabled="form.processing"
                     >
-                        Submit
+                        <i class="ri-save-line"></i>
+                        <strong>Submit</strong>
                     </button>
                 </div>
             </CardBody>

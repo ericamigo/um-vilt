@@ -11,6 +11,7 @@ return new class extends Migration
     {
         Schema::create('waivers', function (Blueprint $table) {
             $table->id();
+            $table->ulid('ulid')->unique();
             $table->integer('year');
             $table->string('semester');
             $table->string('status')->default(WaiverStatus::New->value);

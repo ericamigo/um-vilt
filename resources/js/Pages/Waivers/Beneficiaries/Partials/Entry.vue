@@ -24,12 +24,29 @@ const showEdit = ref(false);
     >
         <div class="flex gap-6">
             <div class="grow">
-                {{ beneficiary }}
+                <div class="font-bold">
+                    {{ beneficiary.student.user.first_name }}
+                    {{ beneficiary.student.user.last_name }}
+                </div>
+                <div
+                    class="text-sm text-gray-500"
+                    v-text="beneficiary.relationship"
+                ></div>
             </div>
             <div v-if="waiver.status === 'new'" class="flex gap-5">
                 <div>
-                    <button type="button" @click="showEdit = !showEdit">
-                        edit
+                    <button
+                        type="button"
+                        :class="[
+                            'duration-150',
+                            {
+                                'text-gray-500 hover:text-gray-900 dark:hover:text-white':
+                                    !showEdit,
+                            },
+                        ]"
+                        @click="showEdit = !showEdit"
+                    >
+                        <i class="ri-edit-line"></i>
                     </button>
                 </div>
                 <BeneficiariesDestroy
@@ -41,8 +58,9 @@ const showEdit = ref(false);
                         type="button"
                         @click="destroy"
                         :disabled="processing"
+                        class="text-gray-500 hover:text-rose-500 duration-150"
                     >
-                        delete
+                        <i class="ri-delete-bin-6-line"></i>
                     </button>
                 </BeneficiariesDestroy>
             </div>

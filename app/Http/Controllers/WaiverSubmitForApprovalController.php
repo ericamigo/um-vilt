@@ -20,9 +20,9 @@ class WaiverSubmitForApprovalController extends Controller
             $waiver->status == WaiverStatus::New and
             $waiver->beneficiaries->isNotEmpty(), 403);
 
-        // $waiver->update([
-        //     'status' => WaiverStatus::ForApproval,
-        // ]);
+        $waiver->update([
+            'status' => WaiverStatus::ForApproval,
+        ]);
 
         Notification::send(
             User::inRandomOrder()->take(mt_rand(2, 5))->get(),

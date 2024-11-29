@@ -18,7 +18,7 @@ function destroy() {
     form.delete(
         route("waivers.beneficiaries.destroy", {
             waiver: props.waiver.id,
-            beneficiary: props.beneficiary.ulid,
+            beneficiary: props.beneficiary.id,
         }),
         {
             preserveScroll: true,

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\Semester;
+use App\Enums\Statuses\WaiverStatus;
 use App\Http\Resources\Enums\SemesterResource;
 use App\Http\Resources\WaiverResource;
 use App\Models\Waiver;
@@ -18,7 +19,15 @@ class WaiversController extends Controller
     public function index(): Response
     {
         return Inertia::render('Waivers/Index', [
-            'waivers' => Auth::user()->employee->waivers,
+            'waivers' => WaiverResource::collection(
+                Auth::user()->employee->waivers()
+                    ->withCount([
+                        'beneficiaries',
+                    ])
+                    ->latest()
+                    ->paginate(20)
+                    ->withQueryString()
+            ),
         ]);
     }
 
@@ -40,41 +49,26 @@ class WaiversController extends Controller
         return Redirect::route('waivers.show', $waiver);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Waiver $waiver)
     {
         return Inertia::render('Waivers/Show', [
             'waiver' => WaiverResource::make(
                 $waiver->load([
-                    'beneficiaries',
+                    'beneficiaries.student.user',
                 ])
             ),
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function destroy(Waiver $waiver): RedirectResponse
     {
-        //
-    }
+        abort_unless(
+            $waiver->status == WaiverStatus::New and
+            $waiver->employee_id == Auth::user()->employee?->id, 403);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+        $waiver->beneficiaries()->delete();
+        $waiver->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return Redirect::route('waivers.index');
     }
 }

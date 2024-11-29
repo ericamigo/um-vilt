@@ -17,7 +17,6 @@ const props = defineProps({
 });
 
 const form = useForm({
-    student_id: props.beneficiary.student_id,
     relationship: props.beneficiary.relationship,
 });
 
@@ -25,7 +24,7 @@ function submit() {
     form.patch(
         route("waivers.beneficiaries.update", {
             waiver: props.waiver.id,
-            beneficiary: props.beneficiary.ulid,
+            beneficiary: props.beneficiary.id,
         }),
         {
             preserveScroll: true,
@@ -38,19 +37,6 @@ function submit() {
     <form @submit.prevent="submit">
         <Card>
             <CardBody class="space-y-4">
-                <div>
-                    <InputLabel for="student-id" value="Student ID" />
-                    <TextInput
-                        id="student-id"
-                        class="mt-1 block w-full"
-                        v-model="form.student_id"
-                        autofocus
-                    />
-                    <InputError
-                        class="mt-2"
-                        :message="form.errors.student_id"
-                    />
-                </div>
                 <div>
                     <InputLabel for="relationship" value="Relationship" />
                     <TextInput
@@ -67,10 +53,11 @@ function submit() {
                 <div v-if="form.isDirty">
                     <button
                         type="submit"
-                        class="p-4 bg-green-500 font-bold disabled:opacity-50"
+                        class="py-2 px-4 rounded-lg bg-indigo-500 flex gap-2.5 disabled:opacity-50"
                         :disabled="form.processing"
                     >
-                        Submit Changes
+                        <i class="ri-save-line"></i>
+                        <strong>Submit Changes</strong>
                     </button>
                 </div>
             </CardBody>

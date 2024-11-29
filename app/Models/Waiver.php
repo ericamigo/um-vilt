@@ -4,12 +4,15 @@ namespace App\Models;
 
 use App\Enums\Semester;
 use App\Enums\Statuses\WaiverStatus;
+use App\Traits\HasUlid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Waiver extends Model
 {
+    use HasUlid;
+
     protected $fillable = [
         'year',
         'semester',
