@@ -34,7 +34,14 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user()
-                    ? UserResource::make($request->user())
+                    ? $request->user()
+                        ->load([
+                            'notifications' => function ($notifications) {
+                                $notifications
+                                    ->latest()
+                                    ->limit(10);
+                            }
+                        ])
                     : null,
             ],
         ];

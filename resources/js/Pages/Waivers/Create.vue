@@ -2,10 +2,10 @@
 import { Card, CardBody } from "@/Components/Cards";
 import { Head, Link, useForm } from "@inertiajs/vue3";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import InputLabel from "@/Components/InputLabel.vue";
-import TextInput from "@/Components/TextInput.vue";
 import InputError from "@/Components/InputError.vue";
+import InputLabel from "@/Components/InputLabel.vue";
 import SelectInput from "@/Components/SelectInput.vue";
+import TextInput from "@/Components/TextInput.vue";
 
 defineProps({
     semesters: Array,
@@ -32,7 +32,6 @@ function submit() {
                         <Link :href="route('waivers.index')">Back</Link>
                     </div>
                 </div>
-                {{ form }}
                 <form @submit.prevent="submit">
                     <Card>
                         <CardBody class="space-y-4">
@@ -71,11 +70,16 @@ function submit() {
                                     :message="form.errors.semester"
                                 />
                             </div>
+                            <div>
+                                <button
+                                    type="submit"
+                                    class="p-4 bg-green-500 font-bold"
+                                >
+                                    Submit
+                                </button>
+                            </div>
                         </CardBody>
                     </Card>
-                    <button type="submit" class="p-4 bg-green-500 font-bold">
-                        Submit
-                    </button>
                 </form>
             </div>
         </div>

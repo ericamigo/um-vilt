@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WaiverBeneficiariesController;
 use App\Http\Controllers\WaiversController;
@@ -10,9 +12,9 @@ use Inertia\Inertia;
 
 Route::get('/', LandingPageController::class);
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', DashboardController::class)->name('dashboard');
+Route::resource('notifications', NotificationsController::class)
+    ->only('index', 'show', 'update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

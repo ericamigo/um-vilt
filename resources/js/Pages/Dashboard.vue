@@ -1,11 +1,10 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import { Head } from "@inertiajs/vue3";
 </script>
 
 <template>
-    <Head title="Dashboard" />
-
+    <Head title="Dashboard"></Head>
     <AuthenticatedLayout>
         <template #header>
             <h2
@@ -15,16 +14,14 @@ import { Head } from '@inertiajs/vue3';
             </h2>
         </template>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div
-                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800"
+        <Card>
+            <template v-for="i in 7" :key="i">
+                <CardBody
+                    class="border-t border-gray-200 dark:border-gray-700 first:border-t-0"
                 >
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
-                        You're logged in!
-                    </div>
-                </div>
-            </div>
-        </div>
+                    {{ i }}
+                </CardBody>
+            </template>
+        </Card>
     </AuthenticatedLayout>
 </template>
