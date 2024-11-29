@@ -4,37 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\BranchResource;
 use App\Models\Branch;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class LandingPageController extends Controller
 {
     public function __invoke()
     {
+        $student = Auth::user()->student
+            ->load([
+                'user',
+                'course.college.campus.branch',
+            ]);
+
         dd(
-            User::first()->role,
-            User::first()->is_active,
+            $student->toArray(),
+            Auth::user()?->employee?->toArray(),
+            Auth::user()?->student?->toArray(),
         );
-        $branches = Branch::query()
-            ->withCount([
-                'campuses',
-            ])
-            ->with([
-                'campuses' => function ($campuses) {
-                    $campuses
-                        ->with([
-                            'branch',
-                            'colleges' => function ($colleges) {
-                                $colleges->orderBy('name');
-                            },
-                        ])
-                        ->orderBy('name');
-                },
-            ])
-            ->orderBy('name')
-            ->get();
-
-        // return $branches;
-
-        return BranchResource::collection($branches);
     }
 }
