@@ -22,17 +22,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::prefix('/waivers')->name('waivers.')->group(function () {
-    Route::get('/', [WaiversController::class, 'index'])->name('index');
-    Route::get('/create', [WaiversController::class, 'create'])->name('create');
-    Route::post('/', [WaiversController::class, 'store'])->name('store');
-    Route::get('/{waiver}', [WaiversController::class, 'show'])->name('show');
+Route::patch('/waiver/{waiver}/submit-for-approval', WaiverSubmitForApprovalController::class)
+    ->name('waivers.submit-for-approval');
 
-    Route::prefix('/beneficiaries')->name('beneficiaries.')->group(function () {
-        Route::post('/{waiver}', [WaiverBeneficiariesController::class, 'store'])->name('store');
-        Route::patch('/{waiver}/{beneficiary}', [WaiverBeneficiariesController::class, 'update'])->name('update');
-        Route::delete('/{waiver}/{beneficiary}', [WaiverBeneficiariesController::class, 'destroy'])->name('destroy');
-    });
+Route::resource('waivers', WaiversController::class)
+    ->except('edit', 'update', 'destroy');
 
-    Route::patch('/{waiver}/submit-for-approval', WaiverSubmitForApprovalController::class)->name('submit-for-approval');
-});
+Route::resource('waivers.beneficiaries', WaiverBeneficiariesController::class)
+    ->only('store', 'update', 'destroy');
