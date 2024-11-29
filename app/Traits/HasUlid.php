@@ -9,7 +9,7 @@ trait HasUlid
     public static function bootHasUlid(): void
     {
         static::creating(function (object $model) {
-            $model->ulid = str_replace('-', '', Str::ulid());
+            $model->ulid = strtolower(str_replace('-', '', Str::ulid()));
         });
     }
 

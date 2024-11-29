@@ -29,18 +29,15 @@ class WaiversController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request): RedirectResponse
     {
-        $request->user()->employee->waivers()
+        $waiver = $request->user()->employee->waivers()
             ->create($request->only(
                 'year',
                 'semester',
             ));
 
-        return Redirect::route('waivers.index');
+        return Redirect::route('waivers.show', $waiver);
     }
 
     /**
@@ -49,7 +46,11 @@ class WaiversController extends Controller
     public function show(Waiver $waiver)
     {
         return Inertia::render('Waivers/Show', [
-            'waiver' => WaiverResource::make($waiver),
+            'waiver' => WaiverResource::make(
+                $waiver->load([
+                    'beneficiaries',
+                ])
+            ),
         ]);
     }
 

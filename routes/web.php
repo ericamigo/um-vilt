@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WaiverBeneficiariesController;
 use App\Http\Controllers\WaiversController;
+use App\Http\Controllers\WaiverSubmitForApprovalController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,7 +22,17 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/waivers', [WaiversController::class, 'index'])->name('waivers.index');
-Route::get('/waivers/create', [WaiversController::class, 'create'])->name('waivers.create');
-Route::post('/waivers', [WaiversController::class, 'store'])->name('waivers.store');
-Route::get('/waivers/{waiver}', [WaiversController::class, 'show'])->name('waivers.show');
+Route::prefix('/waivers')->name('waivers.')->group(function () {
+    Route::get('/', [WaiversController::class, 'index'])->name('index');
+    Route::get('/create', [WaiversController::class, 'create'])->name('create');
+    Route::post('/', [WaiversController::class, 'store'])->name('store');
+    Route::get('/{waiver}', [WaiversController::class, 'show'])->name('show');
+
+    Route::prefix('/beneficiaries')->name('beneficiaries.')->group(function () {
+        Route::post('/{waiver}', [WaiverBeneficiariesController::class, 'store'])->name('store');
+        Route::patch('/{waiver}/{beneficiary}', [WaiverBeneficiariesController::class, 'update'])->name('update');
+        Route::delete('/{waiver}/{beneficiary}', [WaiverBeneficiariesController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::patch('/{waiver}/submit-for-approval', WaiverSubmitForApprovalController::class)->name('submit-for-approval');
+});

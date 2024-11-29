@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\Semester;
 use App\Enums\Statuses\WaiverStatus;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Waiver extends Model
 {
@@ -21,5 +22,13 @@ class Waiver extends Model
             'semester' => Semester::class,
             'status' => WaiverStatus::class,
         ];
+    }
+
+    /**
+     * Relationship Methods
+     */
+    public function beneficiaries(): HasMany
+    {
+        return $this->hasMany(Beneficiary::class);
     }
 }
