@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WaiversController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -18,3 +19,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('/waivers', [WaiversController::class, 'index'])->name('waivers.index');
+Route::get('/waivers/create', [WaiversController::class, 'create'])->name('waivers.create');
+Route::post('/waivers', [WaiversController::class, 'store'])->name('waivers.store');
+Route::get('/waivers/{waiver}', [WaiversController::class, 'show'])->name('waivers.show');
