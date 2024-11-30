@@ -5,6 +5,12 @@ import { useDateFormatter, useDateToRelative } from "@/Composables/date";
 import { useForm } from "@inertiajs/vue3";
 import BeneficiariesDestroy from "./Destroy.vue";
 import BeneficiariesEdit from "../Edit.vue";
+import {
+    Dialog,
+    DialogPanel,
+    TransitionChild,
+    TransitionRoot,
+} from "@headlessui/vue";
 
 defineProps({
     waiver: {
@@ -72,8 +78,48 @@ const showEdit = ref(false);
                 </BeneficiariesDestroy>
             </div>
         </div>
-        <div v-if="showEdit" class="mt-5">
-            <BeneficiariesEdit :waiver :beneficiary />
-        </div>
+
+        <TransitionRoot appear :show="showEdit" as="template">
+            <Dialog
+                as="div"
+                :open="showEdit"
+                @close="showEdit = !showEdit"
+                class="relative z-10"
+            >
+                <TransitionChild
+                    as="template"
+                    enter="duration-300 ease-out"
+                    enter-from="opacity-0"
+                    enter-to="opacity-100"
+                    leave="duration-200 ease-in"
+                    leave-from="opacity-100"
+                    leave-to="opacity-0"
+                >
+                    <div class="fixed inset-0 bg-black/60 backdrop-blur" />
+                </TransitionChild>
+
+                <div class="fixed inset-0 overflow-y-auto">
+                    <div
+                        class="flex min-h-full items-center justify-center p-4 text-center"
+                    >
+                        <TransitionChild
+                            as="template"
+                            enter="duration-300 ease-out"
+                            enter-from="opacity-0 scale-95"
+                            enter-to="opacity-100 scale-100"
+                            leave="duration-200 ease-in"
+                            leave-from="opacity-100 scale-100"
+                            leave-to="opacity-0 scale-95"
+                        >
+                            <DialogPanel
+                                class="w-full max-w-md transform overflow-hidden rounded-2xl align-middle shadow-xl transition-all"
+                            >
+                                <BeneficiariesEdit :waiver :beneficiary />
+                            </DialogPanel>
+                        </TransitionChild>
+                    </div>
+                </div>
+            </Dialog>
+        </TransitionRoot>
     </CardBody>
 </template>
