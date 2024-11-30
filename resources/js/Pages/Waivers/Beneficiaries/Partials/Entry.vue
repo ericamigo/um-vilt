@@ -5,6 +5,8 @@ import { useDateFormatter, useDateToRelative } from "@/Composables/date";
 import { useForm } from "@inertiajs/vue3";
 import BeneficiariesDestroy from "./Destroy.vue";
 import BeneficiariesEdit from "../Edit.vue";
+import AttachmentsCreate from "../Attachments/Create.vue";
+
 import {
     Dialog,
     DialogPanel,
@@ -23,7 +25,8 @@ defineProps({
     },
 });
 
-const showEdit = ref(false);
+const showEdit = ref(false),
+    showUpload = ref(false);
 </script>
 
 <template>
@@ -47,6 +50,28 @@ const showEdit = ref(false);
                 </div>
             </div>
             <div v-if="waiver.status === 'new'" class="flex gap-3">
+                <div>
+                    <button
+                        type="button"
+                        :class="[
+                            'duration-150 px-1',
+                            {
+                                'text-gray-500 hover:text-gray-900 dark:hover:text-white':
+                                    !showUpload,
+                            },
+                        ]"
+                        v-tooltip="`Upload`"
+                        @click="showUpload = !showUpload"
+                    >
+                        <i class="ri-attachment-line"></i>
+                        <span
+                            v-if="beneficiary.attachments.length"
+                            class="pl-2.5"
+                        >
+                            {{ beneficiary.attachments.length }}
+                        </span>
+                    </button>
+                </div>
                 <div>
                     <button
                         type="button"
@@ -79,6 +104,22 @@ const showEdit = ref(false);
                     </button>
                 </BeneficiariesDestroy>
             </div>
+        </div>
+        <div v-if="showUpload" class="mt-4 space-y-4">
+            <div>
+                <temlate
+                    v-for="attachment in beneficiary.attachments"
+                    :key="attachment.id"
+                >
+                    <div class="py-2 border-t border-gray-700">
+                        <div>{{ attachment.file_name }}</div>
+                        <div class="text-xs text-gray-500">
+                            {{ attachment.path }}
+                        </div>
+                    </div>
+                </temlate>
+            </div>
+            <AttachmentsCreate :beneficiary />
         </div>
 
         <TransitionRoot appear :show="showEdit" as="template">

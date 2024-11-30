@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\BeneficiaryAttachmentsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WaiverAttachmentsController;
 use App\Http\Controllers\WaiverBeneficiariesController;
 use App\Http\Controllers\WaiversController;
 use App\Http\Controllers\WaiverSubmitForApprovalController;
@@ -36,4 +38,12 @@ Route::resource('waivers', WaiversController::class)
 
 Route::resource('waivers.beneficiaries', WaiverBeneficiariesController::class)
     ->only('store', 'update', 'destroy')
+    ->middleware(['auth', EmployeeSection::class]);
+
+Route::resource('waivers.attachments', WaiverAttachmentsController::class)
+    ->only('store', 'show', 'update', 'destroy')
+    ->middleware(['auth', EmployeeSection::class]);
+
+Route::resource('beneficiaries.attachments', BeneficiaryAttachmentsController::class)
+    ->only('store', 'show', 'update', 'destroy')
     ->middleware(['auth', EmployeeSection::class]);

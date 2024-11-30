@@ -23,6 +23,7 @@ class WaiverResource extends JsonResource
             'employee' => EmployeeResource::make($this->whenLoaded('employee')),
             'beneficiaries' => BeneficiaryResource::collection($this->whenLoaded('beneficiaries')),
             'beneficiaries_count' => $this->whenCounted('beneficiaries'),
+            'attachments' => AttachmentResource::collection($this->whenLoaded('attachments')),
             'created_at' => $this->created_at,
         ];
     }

@@ -18,6 +18,7 @@ class BeneficiaryResource extends JsonResource
             'id' => $this->ulid,
             'relationship' => $this->relationship,
             'student' => StudentResource::make($this->whenLoaded('student')),
+            'attachments' => AttachmentResource::collection($this->whenLoaded('attachments')),
         ];
     }
 }

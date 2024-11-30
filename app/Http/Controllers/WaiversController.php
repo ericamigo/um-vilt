@@ -55,7 +55,11 @@ class WaiversController extends Controller
         return Inertia::render('Waivers/Show', [
             'waiver' => WaiverResource::make(
                 $waiver->load([
-                    'beneficiaries.student.user',
+                    'attachments',
+                    'beneficiaries' => [
+                        'student.user',
+                        'attachments',
+                    ],
                 ])
             ),
         ]);

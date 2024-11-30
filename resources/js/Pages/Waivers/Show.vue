@@ -1,6 +1,7 @@
 <script setup>
 import { Card, CardBody } from "@/Components/Cards";
 import { Head, Link } from "@inertiajs/vue3";
+import AttachmentsCreate from "./Attachments/Create.vue";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import BeneficiariesCard from "./Beneficiaries/Card.vue";
 import BeneficiariesCreate from "./Beneficiaries/Create.vue";
@@ -94,11 +95,23 @@ const props = defineProps({
 
                 <div class="card">
                     <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Hic illum mollitia consequuntur neque aliquid tenetur,
-                        pariatur maxime ducimus asperiores cum inventore fugiat
-                        omnis nemo alias aspernatur dignissimos facere expedita
-                        recusandae.
+                        <div>
+                            <temlate
+                                v-for="attachment in waiver.attachments"
+                                :key="attachment.id"
+                            >
+                                <div class="py-2 border-t border-gray-700">
+                                    <div>{{ attachment.file_name }}</div>
+                                    <div class="text-xs text-gray-500">
+                                        {{ attachment.path }}
+                                    </div>
+                                </div>
+                            </temlate>
+                        </div>
+
+                        <div>
+                            <AttachmentsCreate :waiver />
+                        </div>
                     </div>
                 </div>
 
