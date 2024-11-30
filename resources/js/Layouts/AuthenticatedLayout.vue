@@ -6,8 +6,11 @@ import DropdownLink from "@/Components/DropdownLink.vue";
 import NavLink from "@/Components/NavLink.vue";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import { Link } from "@inertiajs/vue3";
+import { useDark, useToggle } from "@vueuse/core";
 
-const showingNavigationDropdown = ref(false);
+const showingNavigationDropdown = ref(false),
+    isDark = useDark(),
+    toggleDark = useToggle(isDark);
 </script>
 
 <template>
@@ -77,6 +80,13 @@ const showingNavigationDropdown = ref(false);
                                     </template>
 
                                     <template #content>
+                                        <button
+                                            type="button"
+                                            class="py-2 px-4 text-sm"
+                                            @click.stop="toggleDark()"
+                                        >
+                                            Appearance
+                                        </button>
                                         <DropdownLink
                                             :href="route('profile.edit')"
                                         >
