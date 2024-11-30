@@ -1,6 +1,8 @@
 <script setup>
 import { CardBody } from "@/Components/Cards";
-import { ref } from "vue";
+import { onMounted, ref, watch } from "vue";
+import { useDateFormatter, useDateToRelative } from "@/Composables/date";
+import { useForm } from "@inertiajs/vue3";
 import BeneficiariesDestroy from "./Destroy.vue";
 import BeneficiariesEdit from "../Edit.vue";
 
@@ -14,8 +16,6 @@ defineProps({
         required: true,
     },
 });
-
-const showEdit = ref(false);
 </script>
 
 <template>
@@ -32,6 +32,11 @@ const showEdit = ref(false);
                     class="text-sm text-gray-500"
                     v-text="beneficiary.relationship"
                 ></div>
+
+                <div>
+                    {{ useDateFormatter("helo") }}
+                    {{ useDateToRelative("helo") }}
+                </div>
             </div>
             <div v-if="waiver.status === 'new'" class="flex gap-5">
                 <div>
