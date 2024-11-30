@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply py-2 px-4 rounded-lg outline-none flex gap-2.5 disabled:opacity-50;
+    }
+    .btn.btn-light {
+        @apply bg-gray-200 dark:bg-gray-700;
+    }
+    .btn.btn-success {
+        @apply bg-emerald-500;
+    }
+    .btn.btn-primary {
+        @apply bg-red-800;
+    }
+    .btn.btn-danger {
+        @apply bg-rose-500;
+    }
+
+    .card {
+        @apply border border-gray-200 dark:border-gray-700 rounded-xl;
+    }
+    .card .card-body {
+        @apply p-4 md:p-6 lg:p-8;
+    }
+}

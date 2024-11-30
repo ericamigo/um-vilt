@@ -17,7 +17,7 @@ use Inertia\Response;
 
 class WaiversController extends Controller
 {
-    public function index(): Response
+    public function index(Request $request): Response
     {
         return Inertia::render('Waivers/Index', [
             'waivers' => WaiverResource::collection(
@@ -26,7 +26,7 @@ class WaiversController extends Controller
                         'beneficiaries',
                     ])
                     ->latest()
-                    ->paginate(20)
+                    ->paginate($request->per_page ?: 5)
                     ->withQueryString()
             ),
         ]);

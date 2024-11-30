@@ -23,7 +23,7 @@ function submit() {
         {
             preserveScroll: true,
             onSuccess: () => form.reset(),
-        },
+        }
     );
 }
 </script>
@@ -47,26 +47,32 @@ function submit() {
                 </div>
                 <div>
                     <InputLabel for="relationship" value="Relationship" />
-                    <TextInput
-                        id="yerelationshipar"
-                        class="mt-1 block w-full"
-                        v-model="form.relationship"
-                        autofocus
-                    />
-                    <InputError
-                        class="mt-2"
-                        :message="form.errors.relationship"
-                    />
-                </div>
-                <div>
-                    <button
-                        type="submit"
-                        class="py-2 px-4 rounded-lg bg-indigo-500 flex gap-2.5 disabled:opacity-50"
-                        :disabled="form.processing"
-                    >
-                        <i class="ri-save-line"></i>
-                        <strong>Submit</strong>
-                    </button>
+                    <div class="flex gap-4 mt-1">
+                        <div class="grow">
+                            <div>
+                                <TextInput
+                                    id="yerelationshipar"
+                                    class="block w-full"
+                                    v-model="form.relationship"
+                                    autofocus
+                                />
+                                <InputError
+                                    class="mt-2"
+                                    :message="form.errors.relationship"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                :disabled="form.processing"
+                            >
+                                <i class="ri-save-line"></i>
+                                <strong>Submit</strong>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </CardBody>
         </Card>

@@ -38,12 +38,12 @@ defineProps({
                     {{ useDateToRelative("helo") }}
                 </div>
             </div>
-            <div v-if="waiver.status === 'new'" class="flex gap-5">
+            <div v-if="waiver.status === 'new'" class="flex gap-3">
                 <div>
                     <button
                         type="button"
                         :class="[
-                            'duration-150',
+                            'duration-150 px-1',
                             {
                                 'text-gray-500 hover:text-gray-900 dark:hover:text-white':
                                     !showEdit,
@@ -63,7 +63,7 @@ defineProps({
                         type="button"
                         @click="destroy"
                         :disabled="processing"
-                        class="text-gray-500 hover:text-rose-500 duration-150"
+                        class="text-gray-500 px-1 hover:text-rose-500 duration-150"
                     >
                         <i class="ri-delete-bin-6-line"></i>
                     </button>

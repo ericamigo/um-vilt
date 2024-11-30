@@ -34,7 +34,7 @@ const props = defineProps({
                             >
                                 <button
                                     type="button"
-                                    class="py-2 px-3 rounded-lg bg-rose-500 text-white flex gap-2.5"
+                                    class="btn btn-danger px-3"
                                     :disabled="processing"
                                     @click="destroy"
                                 >
@@ -45,7 +45,7 @@ const props = defineProps({
                         <div>
                             <Link
                                 :href="route('waivers.index')"
-                                class="py-2 px-4 rounded-lg bg-gray-200 dark:bg-gray-700 flex gap-2.5"
+                                class="btn btn-light"
                             >
                                 <i class="ri-arrow-left-line"></i>
                                 <strong>Back</strong>
@@ -67,6 +67,16 @@ const props = defineProps({
                     </CardBody>
                 </Card>
 
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Hic illum mollitia consequuntur neque aliquid tenetur,
+                        pariatur maxime ducimus asperiores cum inventore fugiat
+                        omnis nemo alias aspernatur dignissimos facere expedita
+                        recusandae.
+                    </div>
+                </div>
+
                 <div
                     v-if="
                         waiver.beneficiaries.length && waiver.status === 'new'
@@ -77,7 +87,7 @@ const props = defineProps({
                         method="patch"
                         as="button"
                         type="button"
-                        class="py-2 px-4 rounded-lg bg-emerald-500 flex gap-2.5"
+                        class="btn btn-success"
                         preserve-scroll
                     >
                         <i class="ri-arrow-right-up-fill"></i>
