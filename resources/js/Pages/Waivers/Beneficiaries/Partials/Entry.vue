@@ -57,6 +57,7 @@ const showEdit = ref(false);
                                     !showEdit,
                             },
                         ]"
+                        v-tooltip="`Edit`"
                         @click="showEdit = !showEdit"
                     >
                         <i class="ri-edit-line"></i>
@@ -71,6 +72,7 @@ const showEdit = ref(false);
                         type="button"
                         @click="destroy"
                         :disabled="processing"
+                        v-tooltip="`Delete`"
                         class="text-gray-500 px-1 hover:text-rose-500 duration-150"
                     >
                         <i class="ri-delete-bin-6-line"></i>

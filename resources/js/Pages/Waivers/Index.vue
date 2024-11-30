@@ -1,7 +1,9 @@
 <script setup>
 import { Card, CardBody } from "@/Components/Cards";
+import { DateTime } from "luxon";
 import { Head, Link } from "@inertiajs/vue3";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import { useLuxon } from "@/Composables/date";
 
 defineProps({
     waivers: Object,
@@ -47,6 +49,20 @@ defineProps({
                                         {{ waiver.beneficiaries_count }}
                                         Beneficiaries
                                     </div>
+                                    <div class="text-sm text-gray-500">
+                                        <span
+                                            v-tooltip="
+                                                useLuxon(
+                                                    waiver.created_at
+                                                ).toRelative()
+                                            "
+                                            >{{
+                                                useLuxon(
+                                                    waiver.created_at
+                                                ).toFormat("ff")
+                                            }}</span
+                                        >
+                                    </div>
                                 </div>
                                 <div>
                                     {{ waiver.status }}
@@ -76,8 +92,9 @@ defineProps({
                                             route().params.per_page == pp,
                                     }"
                                     preserve-scroll
-                                    >{{ pp }}</Link
                                 >
+                                    {{ pp }}
+                                </Link>
                             </div>
                         </template>
                     </div>

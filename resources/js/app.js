@@ -1,12 +1,14 @@
 import "../css/app.css";
 import "./bootstrap";
 import "vue-toastification/dist/index.css";
+import "floating-vue/dist/style.css";
 
 import { createApp, h } from "vue";
 import { createInertiaApp, router } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { useDark } from "@vueuse/core";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy";
+import FloatingVue from "floating-vue";
 import Toast, { useToast } from "vue-toastification";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
@@ -26,6 +28,7 @@ createInertiaApp({
                 position: "bottom-right",
                 timeout: 8000,
             })
+            .use(FloatingVue)
             .mount(el);
     },
     progress: {

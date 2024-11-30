@@ -37,6 +37,7 @@ const props = defineProps({
                                     class="btn btn-danger px-3"
                                     :disabled="processing"
                                     @click="destroy"
+                                    v-tooltip="`Delete`"
                                 >
                                     <i class="ri-delete-bin-6-line"></i>
                                 </button>
@@ -51,6 +52,30 @@ const props = defineProps({
                                 <strong>Back</strong>
                             </Link>
                         </div>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div>
+                        <VDropdown :distance="6">
+                            <!-- This will be the popover reference (for the events and position) -->
+                            <button>Click me</button>
+
+                            <!-- This will be the content of the popover -->
+                            <template #popper>
+                                <input
+                                    class="tooltip-content"
+                                    v-model="msg"
+                                    placeholder="Tooltip content"
+                                />
+                                <p>
+                                    {{ msg }}
+                                </p>
+
+                                <!-- You can put other components too -->
+                                <ExampleComponent char="=" />
+                            </template>
+                        </VDropdown>
                     </div>
                 </div>
 
