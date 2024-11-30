@@ -27,7 +27,7 @@ const page = usePage(),
                                         :href="
                                             route(
                                                 'notifications.show',
-                                                notification.id,
+                                                notification.id
                                             )
                                         "
                                         :class="{
@@ -57,7 +57,7 @@ const page = usePage(),
                                         :href="
                                             route(
                                                 'notifications.update',
-                                                notification.id,
+                                                notification.id
                                             )
                                         "
                                         method="patch"

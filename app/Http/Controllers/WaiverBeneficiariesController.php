@@ -12,13 +12,17 @@ class WaiverBeneficiariesController extends Controller
 {
     public function store(BeneficiaryRequest $request, Waiver $waiver): RedirectResponse
     {
-        $waiver->beneficiaries()
+        $beneficary = $waiver->beneficiaries()
             ->create($request->only(
                 'student_id',
                 'relationship',
             ));
 
-        return Redirect::back();
+        return Redirect::back()
+            ->with('success', sprintf(
+                'Successfully added %s as beneficiary.',
+                $beneficary->student->user->name
+            ));
     }
 
     public function update(BeneficiaryRequest $request, Waiver $waiver, Beneficiary $beneficiary): RedirectResponse
@@ -39,6 +43,7 @@ class WaiverBeneficiariesController extends Controller
 
         $beneficiary->delete();
 
-        return Redirect::back();
+        return Redirect::back()
+            ->with('error', 'Beneficiary has been deleted.');
     }
 }

@@ -16,6 +16,8 @@ defineProps({
         required: true,
     },
 });
+
+const showEdit = ref(false);
 </script>
 
 <template>
