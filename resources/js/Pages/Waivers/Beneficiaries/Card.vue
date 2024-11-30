@@ -21,8 +21,5 @@ const beneficiaries = computed(() => props.waiver.beneficiaries);
         <CardBody v-if="beneficiaries.length === 0">
             No beneficiaries found
         </CardBody>
-        <CardBody>
-            {{ flash }}
-        </CardBody>
     </Card>
 </template>
