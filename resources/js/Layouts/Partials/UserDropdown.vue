@@ -1,6 +1,6 @@
 <script setup>
-import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
-import { Link } from "@inertiajs/vue3";
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
@@ -22,30 +22,14 @@ import { Link } from "@inertiajs/vue3";
                 leave-to-class="transform scale-95 opacity-0"
             >
                 <MenuItems
-                    class="absolute right-0 mt-2 w-56 origin-top-right rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+                    class="absolute right-0 mt-2 w-56 origin-top-right rounded-lg border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800"
                 >
                     <div class="grid py-2">
                         <MenuItem v-slot="{ active }">
-                            <Link
-                                href="#"
-                                :class="[
-                                    'py-2 px-4 text-left',
-                                    { 'bg-red-800': active },
-                                ]"
-                            >
-                                Profile</Link
-                            >
+                            <Link href="#" :class="['px-4 py-2 text-left', { 'bg-red-800': active }]">Profile</Link>
                         </MenuItem>
                         <MenuItem v-slot="{ active }">
-                            <Link
-                                href="#"
-                                :class="[
-                                    'py-2 px-4 text-left',
-                                    { 'bg-red-800': active },
-                                ]"
-                            >
-                                Account</Link
-                            >
+                            <Link href="#" :class="['px-4 py-2 text-left', { 'bg-red-800': active }]">Account</Link>
                         </MenuItem>
                         <MenuItem v-slot="{ active }">
                             <Link
@@ -53,13 +37,10 @@ import { Link } from "@inertiajs/vue3";
                                 method="post"
                                 as="button"
                                 type="button"
-                                :class="[
-                                    'py-2 px-4 text-left',
-                                    { 'bg-red-800': active },
-                                ]"
+                                :class="['px-4 py-2 text-left', { 'bg-red-800': active }]"
                             >
-                                Log Out</Link
-                            >
+                                Log Out
+                            </Link>
                         </MenuItem>
                     </div>
                 </MenuItems>

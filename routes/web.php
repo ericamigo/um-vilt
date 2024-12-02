@@ -38,12 +38,15 @@ Route::resource('waivers', WaiversController::class)
 
 Route::resource('waivers.beneficiaries', WaiverBeneficiariesController::class)
     ->only('store', 'update', 'destroy')
+    ->scoped()
     ->middleware(['auth', EmployeeSection::class]);
 
 Route::resource('waivers.attachments', WaiverAttachmentsController::class)
     ->only('store', 'show', 'update', 'destroy')
+    ->scoped()
     ->middleware(['auth', EmployeeSection::class]);
 
 Route::resource('beneficiaries.attachments', BeneficiaryAttachmentsController::class)
     ->only('store', 'show', 'update', 'destroy')
+    ->scoped()
     ->middleware(['auth', EmployeeSection::class]);

@@ -1,5 +1,5 @@
 <script setup>
-import { Head, Link } from "@inertiajs/vue3";
+import { Head, Link } from '@inertiajs/vue3'
 
 defineProps({
     canLogin: {
@@ -16,36 +16,34 @@ defineProps({
         type: String,
         required: true,
     },
-});
+})
 
 function handleImageError() {
-    document.getElementById("screenshot-container")?.classList.add("!hidden");
-    document.getElementById("docs-card")?.classList.add("!row-span-1");
-    document.getElementById("docs-card-content")?.classList.add("!flex-row");
-    document.getElementById("background")?.classList.add("!hidden");
+    document.getElementById('screenshot-container')?.classList.add('!hidden')
+    document.getElementById('docs-card')?.classList.add('!row-span-1')
+    document.getElementById('docs-card-content')?.classList.add('!flex-row')
+    document.getElementById('background')?.classList.add('!hidden')
 }
 </script>
 
 <template>
     <Head title="Welcome" />
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+    <div class="bg-neutral-50 text-black/50 dark:bg-black dark:text-white/50">
         <img
+            src="https://laravel.com/assets/img/welcome/background.svg"
             id="background"
             class="absolute -left-20 top-0 max-w-[877px]"
-            src="https://laravel.com/assets/img/welcome/background.svg"
         />
         <div
             class="relative flex min-h-screen flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white"
         >
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                <header
-                    class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3"
-                >
+                <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div class="flex lg:col-start-2 lg:justify-center">
                         <svg
                             class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]"
-                            viewBox="0 0 62 65"
                             fill="none"
+                            viewBox="0 0 62 65"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <path
@@ -87,12 +85,9 @@ function handleImageError() {
                         <a
                             href="https://laravel.com/docs"
                             id="docs-card"
-                            class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
+                            class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10"
                         >
-                            <div
-                                id="screenshot-container"
-                                class="relative flex w-full flex-1 items-stretch"
-                            >
+                            <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
                                 <img
                                     src="https://laravel.com/assets/img/welcome/docs-light.svg"
                                     alt="Laravel documentation screenshot"
@@ -109,63 +104,50 @@ function handleImageError() {
                                 ></div>
                             </div>
 
-                            <div
-                                class="relative flex items-center gap-6 lg:items-end"
-                            >
-                                <div
-                                    id="docs-card-content"
-                                    class="flex items-start gap-6 lg:flex-col"
-                                >
+                            <div class="relative flex items-center gap-6 lg:items-end">
+                                <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
                                     <div
                                         class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16"
                                     >
                                         <svg
                                             class="size-5 sm:size-6"
-                                            xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill="#FF2D20"
                                                 d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"
+                                                fill="#FF2D20"
                                             />
                                             <path
-                                                fill="#FF2D20"
                                                 d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"
+                                                fill="#FF2D20"
                                             />
                                         </svg>
                                     </div>
 
                                     <div class="pt-3 sm:pt-5 lg:pt-0">
-                                        <h2
-                                            class="text-xl font-semibold text-black dark:text-white"
-                                        >
-                                            Documentation
-                                        </h2>
+                                        <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
 
                                         <p class="mt-4 text-sm/relaxed">
-                                            Laravel has wonderful documentation
-                                            covering every aspect of the
-                                            framework. Whether you are a
-                                            newcomer or have prior experience
-                                            with Laravel, we recommend reading
-                                            our documentation from beginning to
-                                            end.
+                                            Laravel has wonderful documentation covering every aspect of the framework.
+                                            Whether you are a newcomer or have prior experience with Laravel, we
+                                            recommend reading our documentation from beginning to end.
                                         </p>
                                     </div>
                                 </div>
 
                                 <svg
                                     class="size-6 shrink-0 stroke-[#FF2D20]"
-                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
-                                    viewBox="0 0 24 24"
                                     stroke-width="1.5"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                     />
                                 </svg>
                             </div>
@@ -173,16 +155,16 @@ function handleImageError() {
 
                         <a
                             href="https://laracasts.com"
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
+                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20] lg:pb-10"
                         >
                             <div
                                 class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16"
                             >
                                 <svg
                                     class="size-5 sm:size-6"
-                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <g fill="#FF2D20">
                                         <path
@@ -193,48 +175,42 @@ function handleImageError() {
                             </div>
 
                             <div class="pt-3 sm:pt-5">
-                                <h2
-                                    class="text-xl font-semibold text-black dark:text-white"
-                                >
-                                    Laracasts
-                                </h2>
+                                <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
 
                                 <p class="mt-4 text-sm/relaxed">
-                                    Laracasts offers thousands of video
-                                    tutorials on Laravel, PHP, and JavaScript
-                                    development. Check them out, see for
-                                    yourself, and massively level up your
+                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript
+                                    development. Check them out, see for yourself, and massively level up your
                                     development skills in the process.
                                 </p>
                             </div>
 
                             <svg
                                 class="size-6 shrink-0 self-center stroke-[#FF2D20]"
-                                xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
-                                viewBox="0 0 24 24"
                                 stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                 />
                             </svg>
                         </a>
 
                         <a
                             href="https://laravel-news.com"
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
+                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20] lg:pb-10"
                         >
                             <div
                                 class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16"
                             >
                                 <svg
                                     class="size-5 sm:size-6"
-                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <g fill="#FF2D20">
                                         <path
@@ -251,47 +227,41 @@ function handleImageError() {
                             </div>
 
                             <div class="pt-3 sm:pt-5">
-                                <h2
-                                    class="text-xl font-semibold text-black dark:text-white"
-                                >
-                                    Laravel News
-                                </h2>
+                                <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
 
                                 <p class="mt-4 text-sm/relaxed">
-                                    Laravel News is a community driven portal
-                                    and newsletter aggregating all of the latest
-                                    and most important news in the Laravel
-                                    ecosystem, including new package releases
-                                    and tutorials.
+                                    Laravel News is a community driven portal and newsletter aggregating all of the
+                                    latest and most important news in the Laravel ecosystem, including new package
+                                    releases and tutorials.
                                 </p>
                             </div>
 
                             <svg
                                 class="size-6 shrink-0 self-center stroke-[#FF2D20]"
-                                xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
-                                viewBox="0 0 24 24"
                                 stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                                 />
                             </svg>
                         </a>
 
                         <div
-                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800"
+                            class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] dark:bg-zinc-900 dark:ring-zinc-800 lg:pb-10"
                         >
                             <div
                                 class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16"
                             >
                                 <svg
                                     class="size-5 sm:size-6"
-                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <g fill="#FF2D20">
                                         <path
@@ -302,82 +272,95 @@ function handleImageError() {
                             </div>
 
                             <div class="pt-3 sm:pt-5">
-                                <h2
-                                    class="text-xl font-semibold text-black dark:text-white"
-                                >
-                                    Vibrant Ecosystem
-                                </h2>
+                                <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
 
                                 <p class="mt-4 text-sm/relaxed">
-                                    Laravel's robust library of first-party
-                                    tools and libraries, such as
+                                    Laravel's robust library of first-party tools and libraries, such as
                                     <a
                                         href="https://forge.laravel.com"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]"
-                                        >Forge</a
-                                    >,
+                                    >
+                                        Forge
+                                    </a>
+                                    ,
                                     <a
                                         href="https://vapor.laravel.com"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Vapor</a
-                                    >,
+                                    >
+                                        Vapor
+                                    </a>
+                                    ,
                                     <a
                                         href="https://nova.laravel.com"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Nova</a
-                                    >,
+                                    >
+                                        Nova
+                                    </a>
+                                    ,
                                     <a
                                         href="https://envoyer.io"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Envoyer</a
-                                    >, and
+                                    >
+                                        Envoyer
+                                    </a>
+                                    , and
                                     <a
                                         href="https://herd.laravel.com"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Herd</a
                                     >
-                                    help you take your projects to the next
-                                    level. Pair them with powerful open source
+                                        Herd
+                                    </a>
+                                    help you take your projects to the next level. Pair them with powerful open source
                                     libraries like
                                     <a
                                         href="https://laravel.com/docs/billing"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Cashier</a
-                                    >,
+                                    >
+                                        Cashier
+                                    </a>
+                                    ,
                                     <a
                                         href="https://laravel.com/docs/dusk"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Dusk</a
-                                    >,
+                                    >
+                                        Dusk
+                                    </a>
+                                    ,
                                     <a
                                         href="https://laravel.com/docs/broadcasting"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Echo</a
-                                    >,
+                                    >
+                                        Echo
+                                    </a>
+                                    ,
                                     <a
                                         href="https://laravel.com/docs/horizon"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Horizon</a
-                                    >,
+                                    >
+                                        Horizon
+                                    </a>
+                                    ,
                                     <a
                                         href="https://laravel.com/docs/sanctum"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Sanctum</a
-                                    >,
+                                    >
+                                        Sanctum
+                                    </a>
+                                    ,
                                     <a
                                         href="https://laravel.com/docs/telescope"
                                         class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white"
-                                        >Telescope</a
-                                    >, and more.
+                                    >
+                                        Telescope
+                                    </a>
+                                    , and more.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </main>
 
-                <footer
-                    class="py-16 text-center text-sm text-black dark:text-white/70"
-                >
+                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                     Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
                 </footer>
             </div>

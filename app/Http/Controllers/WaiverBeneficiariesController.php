@@ -41,6 +41,7 @@ class WaiverBeneficiariesController extends Controller
     {
         abort_unless($waiver->id === $beneficiary->waiver_id, 404);
 
+        $beneficiary->deleteAllAttachments();
         $beneficiary->delete();
 
         return Redirect::back()

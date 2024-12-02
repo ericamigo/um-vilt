@@ -9,12 +9,11 @@ use App\Traits\HasUlid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Waiver extends Model
 {
-    use HasUlid;
     use HasAttachments;
+    use HasUlid;
 
     protected $fillable = [
         'year',

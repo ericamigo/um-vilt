@@ -3,7 +3,9 @@
 namespace App\Traits;
 
 use App\Models\Attachment;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -15,10 +17,20 @@ trait HasAttachments
         return $this->morphMany(Attachment::class, 'model');
     }
 
-    public function uploadFile($file)
+    public function uploadFile(UploadedFile $file)
     {
         $fileName = $file->getClientOriginalName();
-        $path = $file->store('attachments');
+        $path = $file->storeAs(
+            'attachments',
+            Str::of($fileName)
+                ->beforeLast('.')
+                ->slug()
+                ->append('-')
+                ->append(Carbon::now()->timestamp)
+                ->append('.')
+                ->append($file->getClientOriginalExtension())
+                ->lower()
+        );
 
         $this->attachments()
             ->create([
@@ -29,14 +41,14 @@ trait HasAttachments
 
     public function deleteAllAttachments()
     {
-        foreach ($this->attachments as $attachment) {
-            try {
-                Storage::delete($attachment->path);
-            } catch (\Throwable $th) {
-                Log::alert($th->getMessage());
-            }
+        $first = $this->attachments->first();
 
-            $attachment->delete();
+        if ($first) {
+            Storage::deleteDirectory(
+                Str::of($first->path)->beforeLast('/')
+            );
         }
+
+        $this->attachments()->delete();
     }
 }

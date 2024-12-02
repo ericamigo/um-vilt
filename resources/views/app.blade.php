@@ -6,15 +6,15 @@
 
         <title inertia>{{ config('app.name', 'Waiver') }}</title>
 
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"  rel="stylesheet" />
+        <link rel="preconnect" href="https://rsms.me/" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
 
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900">
+    <body class="font-sans antialiased text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-900 selection:bg-red-800 selection:text-white overscroll-none">
         @inertia
     </body>
 </html>

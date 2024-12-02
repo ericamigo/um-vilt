@@ -1,30 +1,27 @@
 <script setup>
-import { Card, CardBody } from "@/Components/Cards";
-import { useForm } from "@inertiajs/vue3";
-import InputError from "@/Components/InputError.vue";
-import InputLabel from "@/Components/InputLabel.vue";
-import TextInput from "@/Components/TextInput.vue";
+import { Card, CardBody } from '@/Components/Cards'
+import { useForm } from '@inertiajs/vue3'
+import InputError from '@/Components/InputError.vue'
+import InputLabel from '@/Components/InputLabel.vue'
+import TextInput from '@/Components/TextInput.vue'
 
 const props = defineProps({
     waiver: {
         type: Object,
         required: true,
     },
-});
+})
 
 const form = useForm({
-    student_id: "",
-    relationship: "",
-});
+    student_id: '',
+    relationship: '',
+})
 
 function submit() {
-    form.post(
-        route("waivers.beneficiaries.store", { waiver: props.waiver.id }),
-        {
-            preserveScroll: true,
-            onSuccess: () => form.reset(),
-        }
-    );
+    form.post(route('waivers.beneficiaries.store', { waiver: props.waiver.id }), {
+        preserveScroll: true,
+        onSuccess: () => form.reset(),
+    })
 }
 </script>
 
@@ -33,41 +30,26 @@ function submit() {
         <Card>
             <CardBody class="space-y-4">
                 <div>
-                    <InputLabel for="student-id" value="Student ID" />
-                    <TextInput
-                        id="student-id"
-                        class="mt-1 block w-full"
-                        v-model="form.student_id"
-                        autofocus
-                    />
-                    <InputError
-                        class="mt-2"
-                        :message="form.errors.student_id"
-                    />
+                    <InputLabel value="Student ID" for="student-id" />
+                    <TextInput id="student-id" v-model="form.student_id" autofocus class="mt-1 block w-full" />
+                    <InputError :message="form.errors.student_id" class="mt-2" />
                 </div>
                 <div>
-                    <InputLabel for="relationship" value="Relationship" />
-                    <div class="flex gap-4 mt-1">
+                    <InputLabel value="Relationship" for="relationship" />
+                    <div class="mt-1 flex gap-4">
                         <div class="grow">
                             <div>
                                 <TextInput
                                     id="yerelationshipar"
-                                    class="block w-full"
                                     v-model="form.relationship"
                                     autofocus
+                                    class="block w-full"
                                 />
-                                <InputError
-                                    class="mt-2"
-                                    :message="form.errors.relationship"
-                                />
+                                <InputError :message="form.errors.relationship" class="mt-2" />
                             </div>
                         </div>
                         <div>
-                            <button
-                                type="submit"
-                                class="btn btn-primary"
-                                :disabled="form.processing"
-                            >
+                            <button type="submit" :disabled="form.processing" class="btn btn-primary">
                                 <i class="ri-save-line"></i>
                                 <strong>Submit</strong>
                             </button>

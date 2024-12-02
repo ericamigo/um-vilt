@@ -3,13 +3,9 @@ defineProps({
     message: {
         type: String,
     },
-});
+})
 </script>
 
 <template>
-    <div v-show="message">
-        <p class="text-sm text-red-600 dark:text-red-400">
-            {{ message }}
-        </p>
-    </div>
+    <div v-if="message" class="text-xs text-rose-500" v-text="message"></div>
 </template>

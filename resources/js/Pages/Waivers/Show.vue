@@ -1,42 +1,38 @@
 <script setup>
-import { Card, CardBody } from "@/Components/Cards";
-import { Head, Link } from "@inertiajs/vue3";
-import AttachmentsCreate from "./Attachments/Create.vue";
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import BeneficiariesCard from "./Beneficiaries/Card.vue";
-import BeneficiariesCreate from "./Beneficiaries/Create.vue";
-import WaiversDestroy from "./Partials/Destroy.vue";
+import { Card, CardBody } from '@/Components/Cards'
+import { Head, Link } from '@inertiajs/vue3'
+import AttachmentsCreate from './Attachments/Create.vue'
+import AttachmentsEntry from './Attachments/Entry.vue'
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
+import BeneficiariesCard from './Beneficiaries/Card.vue'
+import BeneficiariesCreate from './Beneficiaries/Create.vue'
+import StatusBadge from '@/Components/Badges/Status.vue'
+import WaiversDestroy from './Partials/Destroy.vue'
 
 const props = defineProps({
     waiver: Object,
-});
+})
 </script>
 
 <template>
     <Head title="Waiver" />
     <AuthenticatedLayout>
         <div class="py-12">
-            <div class="mx-auto max-w-screen-md sm:px-6 lg:px-8 space-y-10">
+            <div class="mx-auto max-w-screen-md space-y-10 sm:px-6 lg:px-8">
                 <div class="flex justify-between">
                     <div class="flex items-center gap-5">
-                        <h1 class="text-2xl/10 font-bold">Waiver</h1>
+                        <h1 class="text-2xl/10 font-extrabold">Waiver</h1>
                         <div>
-                            <div
-                                class="text-sm/6 font-bold"
-                                v-text="waiver.status"
-                            ></div>
+                            <StatusBadge :status="{ label: waiver.status }" />
                         </div>
                     </div>
                     <div class="flex gap-2">
                         <div v-if="waiver.status === 'new'">
-                            <WaiversDestroy
-                                :waiver
-                                v-slot="{ destroy, processing }"
-                            >
+                            <WaiversDestroy :waiver v-slot="{ destroy, processing }">
                                 <button
                                     type="button"
-                                    class="btn btn-danger px-3"
                                     :disabled="processing"
+                                    class="btn btn-danger px-3"
                                     @click="destroy"
                                     v-tooltip="`Delete`"
                                 >
@@ -45,10 +41,7 @@ const props = defineProps({
                             </WaiversDestroy>
                         </div>
                         <div>
-                            <Link
-                                :href="route('waivers.index')"
-                                class="btn btn-light"
-                            >
+                            <Link :href="route('waivers.index')" class="btn btn-light">
                                 <i class="ri-arrow-left-line"></i>
                                 <strong>Back</strong>
                             </Link>
@@ -56,70 +49,31 @@ const props = defineProps({
                     </div>
                 </div>
 
-                <div class="flex">
-                    <div>
-                        <VDropdown :distance="6">
-                            <!-- This will be the popover reference (for the events and position) -->
-                            <button>Click me</button>
-
-                            <!-- This will be the content of the popover -->
-                            <template #popper>
-                                <input
-                                    class="tooltip-content"
-                                    v-model="msg"
-                                    placeholder="Tooltip content"
-                                />
-                                <p>
-                                    {{ msg }}
-                                </p>
-
-                                <!-- You can put other components too -->
-                                <ExampleComponent char="=" />
-                            </template>
-                        </VDropdown>
-                    </div>
-                </div>
-
                 <Card>
                     <CardBody class="space-y-4">
                         <div>
-                            <div class="text-xs text-gray-500">Year</div>
+                            <div class="text-xs text-neutral-500">Year</div>
                             <div>{{ waiver.year }}</div>
                         </div>
                         <div>
-                            <div class="text-xs text-gray-500">Semester</div>
+                            <div class="text-xs text-neutral-500">Semester</div>
                             <div>{{ waiver.semester.name }}</div>
                         </div>
                     </CardBody>
+                    <CardBody class="border-t border-neutral-200 dark:border-neutral-700">
+                        <div class="mb-4">
+                            <h4 class="text-lg font-extrabold">Attachments</h4>
+                        </div>
+                        <div v-if="waiver.attachments" class="-mb-3">
+                            <template v-for="(attachment, index) in waiver.attachments" :key="attachment.id">
+                                <AttachmentsEntry :attachment :waiver />
+                            </template>
+                        </div>
+                        <AttachmentsCreate :waiver class="mt-6" />
+                    </CardBody>
                 </Card>
 
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <temlate
-                                v-for="attachment in waiver.attachments"
-                                :key="attachment.id"
-                            >
-                                <div class="py-2 border-t border-gray-700">
-                                    <div>{{ attachment.file_name }}</div>
-                                    <div class="text-xs text-gray-500">
-                                        {{ attachment.path }}
-                                    </div>
-                                </div>
-                            </temlate>
-                        </div>
-
-                        <div>
-                            <AttachmentsCreate :waiver />
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    v-if="
-                        waiver.beneficiaries.length && waiver.status === 'new'
-                    "
-                >
+                <div v-if="waiver.beneficiaries.length && waiver.status === 'new'">
                     <Link
                         :href="route('waivers.submit-for-approval', waiver.id)"
                         method="patch"
@@ -136,10 +90,7 @@ const props = defineProps({
                 <div class="space-y-4">
                     <h4 class="text-lg font-bold">Beneficiaries</h4>
                     <BeneficiariesCard :waiver />
-                    <BeneficiariesCreate
-                        v-if="waiver.status === 'new'"
-                        :waiver
-                    />
+                    <BeneficiariesCreate v-if="waiver.status === 'new'" :waiver />
                 </div>
             </div>
         </div>
