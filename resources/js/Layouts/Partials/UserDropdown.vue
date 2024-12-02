@@ -22,24 +22,59 @@ import { Link } from '@inertiajs/vue3'
                 leave-to-class="transform scale-95 opacity-0"
             >
                 <MenuItems
-                    class="absolute right-0 mt-2 w-56 origin-top-right rounded-lg border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800"
+                    class="absolute right-0 mt-2 w-56 origin-top-right rounded-xl border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800"
                 >
-                    <div class="grid py-2">
+                    <div class="grid p-1">
+                        <div class="px-4 py-3">
+                            <div class="font-bold">
+                                {{ $page.props.auth.user.first_name }}
+                                {{ $page.props.auth.user.last_name }}
+                            </div>
+                            <div class="text-xs text-neutral-500">{{ $page.props.auth.user.email }}</div>
+                        </div>
+                        <div class="-mx-1 py-1">
+                            <div class="border-t border-neutral-200 dark:border-neutral-700"></div>
+                        </div>
                         <MenuItem v-slot="{ active }">
-                            <Link href="#" :class="['px-4 py-2 text-left', { 'bg-red-800': active }]">Profile</Link>
+                            <Link
+                                href="#"
+                                :class="[
+                                    'flex gap-2.5 rounded-lg px-4 py-2 text-left duration-150',
+                                    { 'bg-neutral-100 dark:bg-neutral-900': active },
+                                ]"
+                            >
+                                <i class="ri-user-line"></i>
+                                <span>Profile</span>
+                            </Link>
                         </MenuItem>
                         <MenuItem v-slot="{ active }">
-                            <Link href="#" :class="['px-4 py-2 text-left', { 'bg-red-800': active }]">Account</Link>
+                            <Link
+                                href="#"
+                                :class="[
+                                    'flex gap-2.5 rounded-lg px-4 py-2 text-left duration-150',
+                                    { 'bg-neutral-100 dark:bg-neutral-900': active },
+                                ]"
+                            >
+                                <i class="ri-shield-user-line"></i>
+                                <span>Account</span>
+                            </Link>
                         </MenuItem>
+                        <div class="-mx-1 py-1">
+                            <div class="border-t border-neutral-200 dark:border-neutral-700"></div>
+                        </div>
                         <MenuItem v-slot="{ active }">
                             <Link
                                 :href="route('logout')"
                                 method="post"
                                 as="button"
                                 type="button"
-                                :class="['px-4 py-2 text-left', { 'bg-red-800': active }]"
+                                :class="[
+                                    'flex gap-2.5 rounded-lg px-4 py-2 text-left duration-150',
+                                    { 'bg-neutral-100 dark:bg-neutral-900': active },
+                                ]"
                             >
-                                Log Out
+                                <i class="ri-arrow-right-line"></i>
+                                <span>Log Out</span>
                             </Link>
                         </MenuItem>
                     </div>
