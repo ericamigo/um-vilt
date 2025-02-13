@@ -1,7 +1,9 @@
+import '../css/demo1.css'
 import '../css/app.css'
 import './bootstrap'
-import 'vue-toastification/dist/index.css'
-import 'floating-vue/dist/style.css'
+import '../core/core.bundle.js'
+import '../core/general.js'
+import '../core/demo1.js'
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, router } from '@inertiajs/vue3'
@@ -20,17 +22,11 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
-            .use(Toast, {
-                position: 'bottom-right',
-                timeout: 8000,
-            })
+            .use(Toast, { position: 'bottom-right', timeout: 8000 })
             .use(FloatingVue)
             .mount(el)
     },
-    progress: {
-        color: '#dc2626',
-        delay: 50,
-    },
+    progress: { color: '#dc2626', delay: 50 },
 })
 
 useDark()

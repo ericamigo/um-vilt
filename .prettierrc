@@ -8,10 +8,7 @@
     "tabWidth": 4,
     "trailingComma": "es5",
     "endOfLine": "crlf",
-    "plugins": [
-        "prettier-plugin-organize-attributes",
-        "prettier-plugin-tailwindcss"
-    ],
+    "plugins": ["prettier-plugin-organize-attributes", "prettier-plugin-tailwindcss"],
     "attributeGroups": [
         "^v-if",
         "^v-else-if",

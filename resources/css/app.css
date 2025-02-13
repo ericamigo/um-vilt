@@ -15,35 +15,14 @@
     }
 }
 
-@layer components {
-    .btn {
-        @apply flex gap-2.5 rounded-lg px-4 py-2 outline-none disabled:opacity-50;
-    }
-    .btn.btn-light {
-        @apply bg-neutral-200 dark:bg-neutral-700;
-    }
-    .btn.btn-success {
-        @apply bg-emerald-500;
-    }
-    .btn.btn-primary {
-        @apply bg-red-800;
-    }
-    .btn.btn-danger {
-        @apply bg-rose-500;
-    }
-
-    .card {
-        @apply rounded-xl border border-neutral-200 dark:border-neutral-700;
-    }
-    .card .card-body {
-        @apply p-4 md:p-6 lg:p-8;
-    }
-}
-
 #nprogress {
     @apply relative z-[2000] shadow-none !important;
 }
 
 #nprogress .peg {
     @apply hidden shadow-none !important;
+}
+
+#app {
+    @apply flex grow;
 }
