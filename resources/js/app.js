@@ -3,6 +3,9 @@ import './bootstrap'
 import 'vue-toastification/dist/index.css'
 import 'floating-vue/dist/style.css'
 
+import '../metronic/core/index'
+import '../metronic/app/layouts/demo1'
+
 import { createApp, h } from 'vue'
 import { createInertiaApp, router } from '@inertiajs/vue3'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
@@ -46,3 +49,4 @@ router.on('success', function (e) {
         toast.error(e.detail.page.props.flash.error)
     }
 })
+

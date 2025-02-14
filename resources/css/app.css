@@ -47,3 +47,11 @@
 #nprogress .peg {
     @apply hidden shadow-none !important;
 }
+
+@layer utilities {
+    @import '../metronic/vendors/keenicons/duotone/style.css';
+    @import '../metronic/vendors/keenicons/filled/style.css';
+    @import '../metronic/vendors/keenicons/outline/style.css';
+    @import '../metronic/vendors/keenicons/solid/style.css';
+}
+
