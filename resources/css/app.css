@@ -48,7 +48,13 @@
     @apply hidden shadow-none !important;
 }
 
+#app {
+    @apply flex grow;
+}
+
 @layer utilities {
+    @import '../metronic/css/demos/demo1';
+
     @import '../metronic/vendors/keenicons/duotone/style.css';
     @import '../metronic/vendors/keenicons/filled/style.css';
     @import '../metronic/vendors/keenicons/outline/style.css';

@@ -14,7 +14,27 @@
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-900 selection:bg-red-800 selection:text-white overscroll-none">
+    <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg:#fefefe] [--tw-page-bg-dark:var(--tw-coal-500)] demo1 sidebar-fixed header-fixed bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]">
+        <script>
+        const defaultThemeMode = 'light'; // light|dark|system
+                let themeMode;
+
+                if ( document.documentElement ) {
+                    if ( localStorage.getItem('theme')) {
+                            themeMode = localStorage.getItem('theme');
+                    } else if ( document.documentElement.hasAttribute('data-theme-mode')) {
+                        themeMode = document.documentElement.getAttribute('data-theme-mode');
+                    } else {
+                        themeMode = defaultThemeMode;
+                    }
+
+                    if (themeMode === 'system') {
+                        themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                    }
+
+                    document.documentElement.classList.add(themeMode);
+                }
+        </script>
         @inertia
     </body>
 </html>
