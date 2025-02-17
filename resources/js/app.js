@@ -1,16 +1,10 @@
 import '../css/app.css'
 import './bootstrap'
-// import 'vue-toastification/dist/index.css'
-// import 'floating-vue/dist/style.css'
 
-import '../metronic/css/demos/demo1.css'
-import '../metronic/vendors/keenicons/duotone/style.css'
-import '../metronic/vendors/keenicons/filled/style.css'
-import '../metronic/vendors/keenicons/outline/style.css'
-import '../metronic/vendors/keenicons/solid/style.css'
-
-import '../metronic/core/index'
-import '../metronic/app/layouts/demo1'
+import '../metronic/js/core.bundle.js'
+import '../metronic/vendors/apexcharts/apexcharts.min.js'
+import '../metronic/js/widgets/general.js'
+import '../metronic/js/layouts/demo1.js'
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, router } from '@inertiajs/vue3'

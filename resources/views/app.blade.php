@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+        {{-- <link rel="stylesheet" href="{{ asset('assets/vendors/apexcharts/apexcharts.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/keenicons/styles.bundle.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" /> --}}
 
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
@@ -36,5 +39,10 @@
                 }
         </script>
         @inertia
+
+        {{-- <script src="{{ asset('assets/js/core.bundle.js') }}"></script> --}}
+        {{-- <script src="{{ asset('assets/vendors/apexcharts/apexcharts.min.js') }}"></script> --}}
+        {{-- <script src="{{ asset('assets/js/widgets/general.js') }}"></script> --}}
+        {{-- <script src="{{ asset('assets/js/layouts/demo1.js') }}"></script> --}}
     </body>
 </html>

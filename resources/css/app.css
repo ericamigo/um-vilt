@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '../metronic/vendors/apexcharts/apexcharts.css';
+@import '../metronic/vendors/keenicons/styles.bundle.css';
+@import '../metronic/css/styles.css';
 
 #nprogress {
     @apply relative z-[2000] shadow-none !important;
