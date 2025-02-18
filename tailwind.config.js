@@ -10,17 +10,6 @@ export default {
         './resources/js/**/*.vue',
     ],
 
-    safelist: [
-        'demo1',
-        'hidden',
-        'ki-filled',
-        'ki-outline',
-        'ki-duotone',
-        'ki-solid',
-        { pattern: /^apexcharts-.*$/ },
-        { pattern: /^leaflet-.*$/ },
-    ],
-
     darkMode: 'class',
 
     theme: {
