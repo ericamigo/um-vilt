@@ -57,7 +57,7 @@ const showingNavigationDropdown = ref(false),
                         class="hidden lg:flex lg:items-stretch"
                     >
                         <!--Megamenu-->
-                        <div id="mega_menu" data-menu="true" class="menu lg:gap-7.5 flex-col gap-5 lg:flex-row">
+                        <div id="mega_menu" data-menu="true" class="menu flex-col gap-5 lg:flex-row lg:gap-7.5">
                             <!--Megamenu Item-->
                             <div class="menu-item active">
                                 <a
@@ -81,12 +81,12 @@ const showingNavigationDropdown = ref(false),
                                 >
                                     <span class="menu-title text-nowrap">Profiles</span>
                                     <span class="menu-arrow flex lg:hidden">
-                                        <i class="ki-filled ki-plus text-2xs menu-item-show:hidden"></i>
-                                        <i class="ki-filled ki-minus text-2xs menu-item-show:inline-flex hidden"></i>
+                                        <i class="ki-filled ki-plus menu-item-show:hidden text-2xs"></i>
+                                        <i class="ki-filled ki-minus menu-item-show:inline-flex hidden text-2xs"></i>
                                     </span>
                                 </div>
                                 <div class="menu-dropdown w-full gap-0 lg:max-w-[875px]">
-                                    <div class="lg:p-7.5 pb-2 pt-4">
+                                    <div class="pb-2 pt-4 lg:p-7.5">
                                         <div class="grid gap-5 lg:grid-cols-2 lg:gap-10">
                                             <div class="menu menu-default menu-fit flex-col">
                                                 <h3
@@ -426,13 +426,13 @@ const showingNavigationDropdown = ref(false),
                                         </div>
                                     </div>
                                     <div
-                                        class="bg-light-active dark:bg-coal-500 lg:px-7.5 flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 px-4 py-4 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:py-5 dark:lg:border-t-gray-100"
+                                        class="flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 bg-light-active px-4 py-4 dark:bg-coal-500 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:px-7.5 lg:py-5 dark:lg:border-t-gray-100"
                                     >
                                         <div class="flex flex-col gap-1.5">
                                             <div class="text-md font-semibold leading-none text-gray-900">
                                                 Read to Get Started ?
                                             </div>
-                                            <div class="text-2sm fomt-medium text-gray-600">
+                                            <div class="fomt-medium text-2sm text-gray-600">
                                                 Take your docs to the next level of Metronic
                                             </div>
                                         </div>
@@ -457,13 +457,13 @@ const showingNavigationDropdown = ref(false),
                                 >
                                     <span class="menu-title text-nowrap">My Account</span>
                                     <span class="menu-arrow flex lg:hidden">
-                                        <i class="ki-filled ki-plus text-2xs menu-item-show:hidden"></i>
-                                        <i class="ki-filled ki-minus text-2xs menu-item-show:inline-flex hidden"></i>
+                                        <i class="ki-filled ki-plus menu-item-show:hidden text-2xs"></i>
+                                        <i class="ki-filled ki-minus menu-item-show:inline-flex hidden text-2xs"></i>
                                     </span>
                                 </div>
                                 <div class="menu-dropdown w-full flex-col gap-0 lg:max-w-[1240px] lg:flex-row">
                                     <div
-                                        class="lg:p-7.5 bg-light-active dark:bg-coal-500 dark:lg:border-r-coal-100 mt-2 shrink-0 rounded-xl px-3 py-4 lg:mt-0 lg:w-[250px] lg:rounded-l-xl lg:rounded-r-none lg:border-r lg:border-r-gray-200"
+                                        class="mt-2 shrink-0 rounded-xl bg-light-active px-3 py-4 dark:bg-coal-500 lg:mt-0 lg:w-[250px] lg:rounded-l-xl lg:rounded-r-none lg:border-r lg:border-r-gray-200 lg:p-7.5 dark:lg:border-r-coal-100"
                                     >
                                         <h3
                                             class="mb-2 ps-2.5 text-sm font-semibold leading-none text-gray-800 lg:mb-5"
@@ -567,7 +567,7 @@ const showingNavigationDropdown = ref(false),
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="lg:p-7.5 grow pb-2 pt-4 lg:pb-5">
+                                    <div class="grow pb-2 pt-4 lg:p-7.5 lg:pb-5">
                                         <div class="grid gap-5 lg:grid-cols-5">
                                             <div class="flex flex-col">
                                                 <h3
@@ -967,14 +967,14 @@ const showingNavigationDropdown = ref(false),
                                 >
                                     <span class="menu-title text-nowrap">Network</span>
                                     <span class="menu-arrow flex lg:hidden">
-                                        <i class="ki-filled ki-plus text-2xs menu-item-show:hidden"></i>
-                                        <i class="ki-filled ki-minus text-2xs menu-item-show:inline-flex hidden"></i>
+                                        <i class="ki-filled ki-plus menu-item-show:hidden text-2xs"></i>
+                                        <i class="ki-filled ki-minus menu-item-show:inline-flex hidden text-2xs"></i>
                                     </span>
                                 </div>
                                 <div class="menu-dropdown w-full flex-col gap-0 lg:max-w-[670px]">
                                     <div class="flex flex-col lg:flex-row">
                                         <div
-                                            class="lg:p-7.5 bg-light-active dark:bg-coal-500 dark:lg:border-r-coal-100 mt-2 flex shrink-0 flex-col gap-5 rounded-xl px-3 py-4 lg:mt-0 lg:w-[250px] lg:rounded-none lg:rounded-tl-xl lg:border-r lg:border-r-gray-200"
+                                            class="mt-2 flex shrink-0 flex-col gap-5 rounded-xl bg-light-active px-3 py-4 dark:bg-coal-500 lg:mt-0 lg:w-[250px] lg:rounded-none lg:rounded-tl-xl lg:border-r lg:border-r-gray-200 lg:p-7.5 dark:lg:border-r-coal-100"
                                         >
                                             <h3 class="h-3.5 ps-2.5 text-sm font-semibold leading-none text-gray-800">
                                                 General Pages
@@ -1035,7 +1035,7 @@ const showingNavigationDropdown = ref(false),
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="lg:p-7.5 grow pb-2 pt-4 lg:pb-5">
+                                        <div class="grow pb-2 pt-4 lg:p-7.5 lg:pb-5">
                                             <div class="grid gap-5 lg:grid-cols-2">
                                                 <div class="flex flex-col gap-5">
                                                     <h3
@@ -1167,13 +1167,13 @@ const showingNavigationDropdown = ref(false),
                                         </div>
                                     </div>
                                     <div
-                                        class="bg-light-active dark:bg-coal-500 lg:px-7.5 flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 px-4 py-4 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:py-5 dark:lg:border-t-gray-100"
+                                        class="flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 bg-light-active px-4 py-4 dark:bg-coal-500 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:px-7.5 lg:py-5 dark:lg:border-t-gray-100"
                                     >
                                         <div class="flex flex-col gap-1.5">
                                             <div class="text-md font-semibold leading-none text-gray-900">
                                                 Read to Get Started ?
                                             </div>
-                                            <div class="text-2sm fomt-medium text-gray-600">
+                                            <div class="fomt-medium text-2sm text-gray-600">
                                                 Take your docs to the next level of Metronic
                                             </div>
                                         </div>
@@ -1198,13 +1198,13 @@ const showingNavigationDropdown = ref(false),
                                 >
                                     <span class="menu-title text-nowrap">Authentication</span>
                                     <span class="menu-arrow flex lg:hidden">
-                                        <i class="ki-filled ki-plus text-2xs menu-item-show:hidden"></i>
-                                        <i class="ki-filled ki-minus text-2xs menu-item-show:inline-flex hidden"></i>
+                                        <i class="ki-filled ki-plus menu-item-show:hidden text-2xs"></i>
+                                        <i class="ki-filled ki-minus menu-item-show:inline-flex hidden text-2xs"></i>
                                     </span>
                                 </div>
                                 <div class="menu-dropdown w-full flex-col gap-0 lg:max-w-[670px]">
                                     <div class="flex flex-col lg:flex-row">
-                                        <div class="lg:p-7.5 grow pb-2 pt-4 lg:pb-5">
+                                        <div class="grow pb-2 pt-4 lg:p-7.5 lg:pb-5">
                                             <div class="grid gap-5 lg:grid-cols-2">
                                                 <div class="flex flex-col">
                                                     <h3
@@ -1250,7 +1250,7 @@ const showingNavigationDropdown = ref(false),
                                                             </a>
                                                         </div>
                                                         <div class="menu-item pt-1">
-                                                            <span class="text-2sm p-2.5 font-medium text-gray-600">
+                                                            <span class="p-2.5 text-2sm font-medium text-gray-600">
                                                                 Reset Password
                                                             </span>
                                                         </div>
@@ -1338,7 +1338,7 @@ const showingNavigationDropdown = ref(false),
                                                             </a>
                                                         </div>
                                                         <div class="menu-item pt-1">
-                                                            <span class="text-2sm p-2.5 font-medium text-gray-600">
+                                                            <span class="p-2.5 text-2sm font-medium text-gray-600">
                                                                 Reset Password
                                                             </span>
                                                         </div>
@@ -1385,7 +1385,7 @@ const showingNavigationDropdown = ref(false),
                                             </div>
                                         </div>
                                         <div
-                                            class="lg:p-7.5 bg-light-active dark:bg-coal-500 dark:lg:border-l-coal-100 mb-4 shrink-0 rounded-xl px-3 py-4 lg:mb-0 lg:w-[250px] lg:rounded-l-none lg:rounded-r-xl lg:border-l lg:border-l-gray-200"
+                                            class="mb-4 shrink-0 rounded-xl bg-light-active px-3 py-4 dark:bg-coal-500 lg:mb-0 lg:w-[250px] lg:rounded-l-none lg:rounded-r-xl lg:border-l lg:border-l-gray-200 lg:p-7.5 dark:lg:border-l-coal-100"
                                         >
                                             <h3 class="mb-5 ps-2.5 text-sm font-semibold leading-none text-gray-800">
                                                 Other Pages
@@ -1439,13 +1439,13 @@ const showingNavigationDropdown = ref(false),
                                         </div>
                                     </div>
                                     <div
-                                        class="bg-light-active dark:bg-coal-500 lg:px-7.5 flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 px-4 py-4 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:py-5 dark:lg:border-t-gray-100"
+                                        class="flex flex-wrap items-center gap-2.5 rounded-xl border border-gray-300 bg-light-active px-4 py-4 dark:bg-coal-500 lg:justify-between lg:rounded-t-none lg:border-0 lg:border-t lg:border-t-gray-300 lg:px-7.5 lg:py-5 dark:lg:border-t-gray-100"
                                     >
                                         <div class="flex flex-col gap-1.5">
                                             <div class="text-md font-semibold leading-none text-gray-900">
                                                 Read to Get Started ?
                                             </div>
-                                            <div class="text-2sm fomt-medium text-gray-600">
+                                            <div class="fomt-medium text-2sm text-gray-600">
                                                 Take your docs to the next level of Metronic
                                             </div>
                                         </div>
@@ -1470,8 +1470,8 @@ const showingNavigationDropdown = ref(false),
                                 >
                                     <span class="menu-title text-nowrap">Help</span>
                                     <span class="menu-arrow flex lg:hidden">
-                                        <i class="ki-filled ki-plus text-2xs menu-item-show:hidden"></i>
-                                        <i class="ki-filled ki-minus text-2xs menu-item-show:inline-flex hidden"></i>
+                                        <i class="ki-filled ki-plus menu-item-show:hidden text-2xs"></i>
+                                        <i class="ki-filled ki-minus menu-item-show:inline-flex hidden text-2xs"></i>
                                     </span>
                                 </div>
                                 <div class="menu-dropdown menu-default w-full max-w-[220px] py-2.5">
@@ -1590,7 +1590,7 @@ const showingNavigationDropdown = ref(false),
             <div class="flex items-center gap-2 lg:gap-3.5">
                 <button
                     data-modal-toggle="#search_modal"
-                    class="btn btn-icon btn-icon-lg hover:bg-primary-light hover:text-primary size-9 rounded-full text-gray-500"
+                    class="btn btn-icon btn-icon-lg size-9 rounded-full text-gray-500 hover:bg-primary-light hover:text-primary"
                 >
                     <i class="ki-filled ki-magnifier"></i>
                 </button>
@@ -1604,7 +1604,7 @@ const showingNavigationDropdown = ref(false),
                     class="dropdown"
                 >
                     <button
-                        class="dropdown-toggle btn btn-icon btn-icon-lg hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary size-9 rounded-full text-gray-500"
+                        class="dropdown-toggle btn btn-icon btn-icon-lg dropdown-open:bg-primary-light dropdown-open:text-primary size-9 rounded-full text-gray-500 hover:bg-primary-light hover:text-primary"
                     >
                         <i class="ki-filled ki-messages"></i>
                     </button>
@@ -1622,7 +1622,7 @@ const showingNavigationDropdown = ref(false),
                                 </button>
                             </div>
                             <div class="border-b border-b-gray-200"></div>
-                            <div class="shadow-card border-b border-gray-200 py-2.5">
+                            <div class="border-b border-gray-200 py-2.5 shadow-card">
                                 <div class="flex flex-wrap items-center justify-between gap-2 px-5">
                                     <div class="flex flex-wrap items-center gap-2">
                                         <div
@@ -1633,7 +1633,7 @@ const showingNavigationDropdown = ref(false),
                                         <div class="flex flex-col">
                                             <a
                                                 href="#"
-                                                class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                                class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                             >
                                                 HR Team
                                             </a>
@@ -1647,24 +1647,24 @@ const showingNavigationDropdown = ref(false),
                                             <div class="flex">
                                                 <img
                                                     src="assets/media/avatars/300-4.png"
-                                                    class="hover:z-5 ring-light-light relative size-[30px] shrink-0 rounded-full ring-1"
+                                                    class="relative size-[30px] shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                 />
                                             </div>
                                             <div class="flex">
                                                 <img
                                                     src="assets/media/avatars/300-1.png"
-                                                    class="hover:z-5 ring-light-light relative size-[30px] shrink-0 rounded-full ring-1"
+                                                    class="relative size-[30px] shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                 />
                                             </div>
                                             <div class="flex">
                                                 <img
                                                     src="assets/media/avatars/300-2.png"
-                                                    class="hover:z-5 ring-light-light relative size-[30px] shrink-0 rounded-full ring-1"
+                                                    class="relative size-[30px] shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                 />
                                             </div>
                                             <div class="flex">
                                                 <span
-                                                    class="hover:z-5 text-3xs text-success-inverse ring-success-light bg-success relative inline-flex size-6 size-[30px] shrink-0 items-center justify-center rounded-full font-semibold leading-none ring-1"
+                                                    class="relative inline-flex size-6 size-[30px] shrink-0 items-center justify-center rounded-full bg-success text-3xs font-semibold leading-none text-success-inverse ring-1 ring-success-light hover:z-5"
                                                 >
                                                     +10
                                                 </span>
@@ -1795,13 +1795,13 @@ const showingNavigationDropdown = ref(false),
                                 <div class="flex items-end justify-end gap-3.5 px-5">
                                     <div class="flex flex-col gap-1.5">
                                         <div
-                                            class="card bg-primary flex flex-col gap-2.5 rounded-br-none p-3 shadow-none"
+                                            class="card flex flex-col gap-2.5 rounded-br-none bg-primary p-3 shadow-none"
                                         >
-                                            <p class="text-2sm text-light font-medium">This is excellent news!</p>
+                                            <p class="text-2sm font-medium text-light">This is excellent news!</p>
                                         </div>
                                         <div class="relative flex items-center justify-end">
-                                            <span class="text-2xs me-6 font-medium text-gray-600">14:08</span>
-                                            <i class="ki-filled ki-double-check text-success absolute text-lg"></i>
+                                            <span class="me-6 text-2xs font-medium text-gray-600">14:08</span>
+                                            <i class="ki-filled ki-double-check absolute text-lg text-success"></i>
                                         </div>
                                     </div>
                                     <div class="relative shrink-0">
@@ -1841,14 +1841,14 @@ const showingNavigationDropdown = ref(false),
                                 <div class="flex items-end justify-end gap-3.5 px-5">
                                     <div class="flex flex-col gap-1.5">
                                         <div
-                                            class="card bg-primary flex flex-col gap-2.5 rounded-br-none p-3 shadow-none"
+                                            class="card flex flex-col gap-2.5 rounded-br-none bg-primary p-3 shadow-none"
                                         >
-                                            <p class="text-2sm text-light font-medium">
+                                            <p class="text-2sm font-medium text-light">
                                                 Haven't seen the build yet, I'll look now.
                                             </p>
                                         </div>
                                         <div class="relative flex items-center justify-end">
-                                            <span class="text-2xs me-6 font-medium text-gray-600">15:52</span>
+                                            <span class="me-6 text-2xs font-medium text-gray-600">15:52</span>
                                             <i class="ki-filled ki-double-check absolute text-lg text-gray-400"></i>
                                         </div>
                                     </div>
@@ -1862,12 +1862,12 @@ const showingNavigationDropdown = ref(false),
                                 <div class="flex items-end justify-end gap-3.5 px-5">
                                     <div class="flex flex-col gap-1.5">
                                         <div
-                                            class="card bg-primary flex flex-col gap-2.5 rounded-br-none p-3 shadow-none"
+                                            class="card flex flex-col gap-2.5 rounded-br-none bg-primary p-3 shadow-none"
                                         >
-                                            <p class="text-2sm text-light font-medium">Checking the build now</p>
+                                            <p class="text-2sm font-medium text-light">Checking the build now</p>
                                         </div>
                                         <div class="relative flex items-center justify-end">
-                                            <span class="text-2xs me-6 font-medium text-gray-600">15:52</span>
+                                            <span class="me-6 text-2xs font-medium text-gray-600">15:52</span>
                                             <i class="ki-filled ki-double-check absolute text-lg text-gray-400"></i>
                                         </div>
                                     </div>
@@ -1898,18 +1898,18 @@ const showingNavigationDropdown = ref(false),
                                 <div class="relative shrink-0">
                                     <img src="assets/media/avatars/300-14.png" alt="" class="size-8 rounded-full" />
                                     <span
-                                        class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                        class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                     ></span>
                                 </div>
                                 <div class="flex grow items-center justify-between gap-3">
                                     <div class="flex flex-col">
-                                        <div class="text-2sm mb-px">
-                                            <a href="#" class="hover:text-primary-active font-semibold text-gray-900">
+                                        <div class="mb-px text-2sm">
+                                            <a href="#" class="font-semibold text-gray-900 hover:text-primary-active">
                                                 Jane Perez
                                             </a>
                                             <span class="text-gray-600">wants to join chat</span>
                                         </div>
-                                        <span class="text-2xs flex items-center font-medium text-gray-500">
+                                        <span class="flex items-center text-2xs font-medium text-gray-500">
                                             1 day ago
                                             <span class="badge badge-circle mx-1.5 size-1 bg-gray-500"></span>
                                             Design Team
@@ -1955,13 +1955,13 @@ const showingNavigationDropdown = ref(false),
                     class="dropdown"
                 >
                     <button
-                        class="dropdown-toggle btn btn-icon btn-icon-lg hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary size-9 rounded-full text-gray-500"
+                        class="dropdown-toggle btn btn-icon btn-icon-lg dropdown-open:bg-primary-light dropdown-open:text-primary size-9 rounded-full text-gray-500 hover:bg-primary-light hover:text-primary"
                     >
                         <i class="ki-filled ki-element-11"></i>
                     </button>
                     <div class="dropdown-content light:border-gray-300 w-screen max-w-[320px]">
                         <div
-                            class="text-2xs flex items-center justify-between gap-2.5 border-b border-b-gray-200 px-5 py-3 font-medium text-gray-600"
+                            class="flex items-center justify-between gap-2.5 border-b border-b-gray-200 px-5 py-3 text-2xs font-medium text-gray-600"
                         >
                             <span>Apps</span>
                             <span>Enabled</span>
@@ -1977,7 +1977,7 @@ const showingNavigationDropdown = ref(false),
                                     <div class="flex flex-col">
                                         <a
                                             href="#"
-                                            class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                            class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                         >
                                             Jira
                                         </a>
@@ -2000,7 +2000,7 @@ const showingNavigationDropdown = ref(false),
                                     <div class="flex flex-col">
                                         <a
                                             href="#"
-                                            class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                            class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                         >
                                             Inferno
                                         </a>
@@ -2023,7 +2023,7 @@ const showingNavigationDropdown = ref(false),
                                     <div class="flex flex-col">
                                         <a
                                             href="#"
-                                            class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                            class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                         >
                                             Evernote
                                         </a>
@@ -2046,7 +2046,7 @@ const showingNavigationDropdown = ref(false),
                                     <div class="flex flex-col">
                                         <a
                                             href="#"
-                                            class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                            class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                         >
                                             Gitlab
                                         </a>
@@ -2069,7 +2069,7 @@ const showingNavigationDropdown = ref(false),
                                     <div class="flex flex-col">
                                         <a
                                             href="#"
-                                            class="text-2sm hover:text-primary-active font-semibold text-gray-900"
+                                            class="text-2sm font-semibold text-gray-900 hover:text-primary-active"
                                         >
                                             Google webdev
                                         </a>
@@ -2100,7 +2100,7 @@ const showingNavigationDropdown = ref(false),
                     class="dropdown"
                 >
                     <button
-                        class="dropdown-toggle btn btn-icon btn-icon-lg hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary relative size-9 cursor-pointer rounded-full text-gray-500"
+                        class="dropdown-toggle btn btn-icon btn-icon-lg dropdown-open:bg-primary-light dropdown-open:text-primary relative size-9 cursor-pointer rounded-full text-gray-500 hover:bg-primary-light hover:text-primary"
                     >
                         <i class="ki-filled ki-notification-status"></i>
                     </button>
@@ -2245,7 +2245,7 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
@@ -2253,17 +2253,17 @@ const showingNavigationDropdown = ref(false),
                                                     <div class="text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Joe Lincoln
                                                         </a>
                                                         <span class="text-gray-700">mentioned you in</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             Latest Trends
                                                         </a>
                                                         <span class="text-gray-700">topic</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         18 mins ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2272,12 +2272,12 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-col gap-2.5 rounded-lg p-3.5 shadow-none"
+                                                    class="card flex flex-col gap-2.5 rounded-lg bg-light-active p-3.5 shadow-none"
                                                 >
-                                                    <div class="text-2sm mb-px font-semibold text-gray-600">
+                                                    <div class="mb-px text-2sm font-semibold text-gray-600">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             @Cody
                                                         </a>
@@ -2304,24 +2304,24 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Leslie Alexander
                                                         </a>
                                                         <span class="text-gray-700">added new tags to</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             Web Redesign 2024
                                                         </a>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         53 mins ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2351,25 +2351,25 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Guy Hawkins
                                                         </a>
                                                         <span class="text-gray-700">requested access to</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             AirSpace
                                                         </a>
                                                         <span class="text-gray-700">project</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         14 hours ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2402,21 +2402,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Jane Perez
                                                         </a>
                                                         <span class="text-gray-700">invites you to review a file.</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 hours ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2425,12 +2425,12 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <img src="assets/media/file-types/pdf.svg" class="h-5" />
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active me-1 text-xs font-medium text-gray-700"
+                                                        class="me-1 text-xs font-medium text-gray-700 hover:text-primary-active"
                                                     >
                                                         Launch_nov24.pptx
                                                     </a>
@@ -2449,23 +2449,23 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-1">
-                                                <div class="text-2sm mb-px font-medium">
+                                                <div class="mb-px text-2sm font-medium">
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active font-semibold text-gray-900"
+                                                        class="font-semibold text-gray-900 hover:text-primary-active"
                                                     >
                                                         Raymond Pawell
                                                     </a>
                                                     <span class="text-gray-700">posted a new article</span>
-                                                    <a href="#" class="hover:text-primary-active text-primary">
+                                                    <a href="#" class="text-primary hover:text-primary-active">
                                                         2024 Roadmap
                                                     </a>
                                                 </div>
-                                                <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                <span class="flex items-center text-2xs font-medium text-gray-500">
                                                     1 hour ago
                                                     <span class="badge badge-circle mx-1.5 size-1 bg-gray-500"></span>
                                                     Roadmap
@@ -2481,15 +2481,15 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Tyler Hero
                                                         </a>
@@ -2497,7 +2497,7 @@ const showingNavigationDropdown = ref(false),
                                                             wants to view your design project
                                                         </span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 day ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2506,16 +2506,16 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <div
-                                                        class="bg-light flex h-[30px] w-[26px] shrink-0 items-center justify-center rounded border border-gray-200"
+                                                        class="flex h-[30px] w-[26px] shrink-0 items-center justify-center rounded border border-gray-200 bg-light"
                                                     >
                                                         <img src="assets/media/file-types/figma.svg" class="h-5" />
                                                     </div>
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active me-1 text-xs font-medium text-gray-700"
+                                                        class="me-1 text-xs font-medium text-gray-700 hover:text-primary-active"
                                                     >
                                                         Launcher-UIkit.fig
                                                     </a>
@@ -2552,27 +2552,27 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Samuel Lee
                                                         </a>
                                                         <span class="text-gray-700">requested to add user to</span>
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active text-primary font-semibold"
+                                                            class="font-semibold text-primary hover:text-primary-active"
                                                         >
                                                             TechSynergy
                                                         </a>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         22 hours ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2581,25 +2581,25 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center justify-between gap-1.5 rounded-lg px-2.5 py-2 shadow-none"
+                                                    class="card flex flex-row items-center justify-between gap-1.5 rounded-lg bg-light-active px-2.5 py-2 shadow-none"
                                                 >
                                                     <div class="flex flex-col">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active text-xs font-medium text-gray-900"
+                                                            class="text-xs font-medium text-gray-900 hover:text-primary-active"
                                                         >
                                                             Ronald Richards
                                                         </a>
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active text-3xs font-medium text-gray-500"
+                                                            class="text-3xs font-medium text-gray-500 hover:text-primary-active"
                                                         >
                                                             ronald.richards@gmail.com
                                                         </a>
                                                     </div>
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active text-xs font-medium text-gray-700"
+                                                        class="text-xs font-medium text-gray-700 hover:text-primary-active"
                                                     >
                                                         Go to profile
                                                     </a>
@@ -2623,9 +2623,9 @@ const showingNavigationDropdown = ref(false),
                                         <div class="border-b border-b-gray-200"></div>
                                         <div class="flex grow items-center gap-2.5 px-5">
                                             <div
-                                                class="bg-success-light border-success-clarity flex size-8 items-center justify-center rounded-full border"
+                                                class="flex size-8 items-center justify-center rounded-full border border-success-clarity bg-success-light"
                                             >
-                                                <i class="ki-filled ki-check text-success text-lg"></i>
+                                                <i class="ki-filled ki-check text-lg text-success"></i>
                                             </div>
                                             <div class="flex flex-col gap-1">
                                                 <span class="text-2sm font-medium text-gray-700">
@@ -2643,21 +2643,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Ava Peterson
                                                         </a>
                                                         <span class="text-gray-700">uploaded attachment</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2666,14 +2666,14 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center justify-between gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center justify-between gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <div class="flex items-center gap-1.5">
                                                         <img src="assets/media/file-types/xls.svg" class="h-6" />
                                                         <div class="flex flex-col gap-0.5">
                                                             <a
                                                                 href="#"
-                                                                class="hover:text-primary-active text-xs font-medium text-gray-700"
+                                                                class="text-xs font-medium text-gray-700 hover:text-primary-active"
                                                             >
                                                                 Redesign-2024.xls
                                                             </a>
@@ -2722,25 +2722,25 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Ethan Parker
                                                         </a>
                                                         <span class="text-gray-700">created a new tasks to</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             Site Sculpt
                                                         </a>
                                                         <span class="text-gray-700">project</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2748,7 +2748,7 @@ const showingNavigationDropdown = ref(false),
                                                         Web Designer
                                                     </span>
                                                 </div>
-                                                <div class="card bg-light-active gap-3.5 rounded-lg p-3.5 shadow-none">
+                                                <div class="card gap-3.5 rounded-lg bg-light-active p-3.5 shadow-none">
                                                     <div class="flex flex-wrap items-center justify-between gap-2.5">
                                                         <div class="flex flex-col gap-1">
                                                             <span class="text-xs font-medium text-gray-900">
@@ -2762,13 +2762,13 @@ const showingNavigationDropdown = ref(false),
                                                             <div class="flex">
                                                                 <img
                                                                     src="assets/media/avatars/300-3.png"
-                                                                    class="hover:z-5 ring-light-light relative size-6 shrink-0 rounded-full ring-1"
+                                                                    class="relative size-6 shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                                 />
                                                             </div>
                                                             <div class="flex">
                                                                 <img
                                                                     src="assets/media/avatars/300-2.png"
-                                                                    class="hover:z-5 ring-light-light relative size-6 shrink-0 rounded-full ring-1"
+                                                                    class="relative size-6 shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                                 />
                                                             </div>
                                                         </div>
@@ -2793,23 +2793,23 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Benjamin Harris
                                                         </a>
                                                         <span class="text-gray-700">requested to upgrade plan</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary"></a>
+                                                        <a href="#" class="text-primary hover:text-primary-active"></a>
                                                         <span class="text-gray-700"></span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         4 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2842,24 +2842,24 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-1">
-                                                <div class="text-2sm mb-px font-medium">
+                                                <div class="mb-px text-2sm font-medium">
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active font-semibold text-gray-900"
+                                                        class="font-semibold text-gray-900 hover:text-primary-active"
                                                     >
                                                         Isaac Morgan
                                                     </a>
                                                     <span class="text-gray-700">mentioned you in</span>
-                                                    <a href="#" class="hover:text-primary-active text-primary">
+                                                    <a href="#" class="text-primary hover:text-primary-active">
                                                         Data Transmission
                                                     </a>
                                                     topic
                                                 </div>
-                                                <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                <span class="flex items-center text-2xs font-medium text-gray-500">
                                                     6 days ago
                                                     <span class="badge badge-circle mx-1.5 size-1 bg-gray-500"></span>
                                                     Dev Team
@@ -2893,21 +2893,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div id="notification_request_10" class="flex grow flex-col gap-3">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Nova Hawthorne
                                                         </a>
                                                         <span class="text-gray-700">sent you an meeting invation</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         2 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -2915,14 +2915,14 @@ const showingNavigationDropdown = ref(false),
                                                         Dev Team
                                                     </span>
                                                 </div>
-                                                <div class="card bg-light-active rounded-lg p-2.5 shadow-none">
+                                                <div class="card rounded-lg bg-light-active p-2.5 shadow-none">
                                                     <div class="flex flex-wrap items-center justify-between gap-2.5">
                                                         <div class="flex items-center gap-2.5">
-                                                            <div class="border-brand-clarity rounded-lg border">
+                                                            <div class="rounded-lg border border-brand-clarity">
                                                                 <div
-                                                                    class="border-b-brand-clarity bg-brand-light flex items-center justify-center rounded-t-lg border-b"
+                                                                    class="flex items-center justify-center rounded-t-lg border-b border-b-brand-clarity bg-brand-light"
                                                                 >
-                                                                    <span class="text-3xs text-brand fw-medium p-1.5">
+                                                                    <span class="fw-medium p-1.5 text-3xs text-brand">
                                                                         Apr
                                                                     </span>
                                                                 </div>
@@ -2937,7 +2937,7 @@ const showingNavigationDropdown = ref(false),
                                                             <div class="flex flex-col gap-1.5">
                                                                 <a
                                                                     href="#"
-                                                                    class="hover:text-primary-active text-xs font-medium text-gray-700"
+                                                                    class="text-xs font-medium text-gray-700 hover:text-primary-active"
                                                                 >
                                                                     Peparation For Release
                                                                 </a>
@@ -2950,24 +2950,24 @@ const showingNavigationDropdown = ref(false),
                                                             <div class="flex">
                                                                 <img
                                                                     src="assets/media/avatars/300-4.png"
-                                                                    class="hover:z-5 ring-light-light relative size-6 shrink-0 rounded-full ring-1"
+                                                                    class="relative size-6 shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                                 />
                                                             </div>
                                                             <div class="flex">
                                                                 <img
                                                                     src="assets/media/avatars/300-1.png"
-                                                                    class="hover:z-5 ring-light-light relative size-6 shrink-0 rounded-full ring-1"
+                                                                    class="relative size-6 shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                                 />
                                                             </div>
                                                             <div class="flex">
                                                                 <img
                                                                     src="assets/media/avatars/300-2.png"
-                                                                    class="hover:z-5 ring-light-light relative size-6 shrink-0 rounded-full ring-1"
+                                                                    class="relative size-6 shrink-0 rounded-full ring-1 ring-light-light hover:z-5"
                                                                 />
                                                             </div>
                                                             <div class="flex">
                                                                 <span
-                                                                    class="hover:z-5 text-3xs text-success-inverse ring-success-light bg-success relative inline-flex size-6 shrink-0 items-center justify-center rounded-full font-semibold leading-none ring-1"
+                                                                    class="relative inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-success text-3xs font-semibold leading-none text-success-inverse ring-1 ring-success-light hover:z-5"
                                                                 >
                                                                     +3
                                                                 </span>
@@ -3000,24 +3000,24 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-1">
-                                                <div class="text-2sm mb-px font-medium">
+                                                <div class="mb-px text-2sm font-medium">
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active font-semibold text-gray-900"
+                                                        class="font-semibold text-gray-900 hover:text-primary-active"
                                                     >
                                                         Adrian Vale
                                                     </a>
                                                     <span class="text-gray-700">change the due date of</span>
-                                                    <a href="#" class="hover:text-primary-active text-primary">
+                                                    <a href="#" class="text-primary hover:text-primary-active">
                                                         Marketing
                                                     </a>
                                                     to 13 May
                                                 </div>
-                                                <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                <span class="flex items-center text-2xs font-medium text-gray-500">
                                                     2 days ago
                                                     <span class="badge badge-circle mx-1.5 size-1 bg-gray-500"></span>
                                                     Marketing
@@ -3033,21 +3033,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Skylar Frost
                                                         </a>
                                                         <span class="text-gray-700">uploaded 2 attachments</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3056,14 +3056,14 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center justify-between gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center justify-between gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <div class="flex items-center gap-1.5">
                                                         <img src="assets/media/file-types/word.svg" class="h-6" />
                                                         <div class="flex flex-col gap-0.5">
                                                             <a
                                                                 href="#"
-                                                                class="hover:text-primary-active text-xs font-medium text-gray-700"
+                                                                class="text-xs font-medium text-gray-700 hover:text-primary-active"
                                                             >
                                                                 Landing-page.docx
                                                             </a>
@@ -3102,14 +3102,14 @@ const showingNavigationDropdown = ref(false),
                                                     </button>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center justify-between gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center justify-between gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <div class="flex items-center gap-1.5">
                                                         <img src="assets/media/file-types/svg.svg" class="h-6" />
                                                         <div class="flex flex-col gap-0.5">
                                                             <a
                                                                 href="#"
-                                                                class="hover:text-primary-active text-xs font-medium text-gray-700"
+                                                                class="text-xs font-medium text-gray-700 hover:text-primary-active"
                                                             >
                                                                 New-icon.svg
                                                             </a>
@@ -3158,7 +3158,7 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
@@ -3166,17 +3166,17 @@ const showingNavigationDropdown = ref(false),
                                                     <div class="text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Selene Silverleaf
                                                         </a>
                                                         <span class="text-gray-700">commented on</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             SiteSculpt
                                                         </a>
                                                         <span class="text-gray-700"></span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         4 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3185,12 +3185,12 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-col gap-2.5 rounded-lg p-3.5 shadow-none"
+                                                    class="card flex flex-col gap-2.5 rounded-lg bg-light-active p-3.5 shadow-none"
                                                 >
-                                                    <div class="text-2sm mb-px font-semibold text-gray-600">
+                                                    <div class="mb-px text-2sm font-semibold text-gray-600">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             @Cody
                                                         </a>
@@ -3217,25 +3217,25 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Thalia Fox
                                                         </a>
                                                         <span class="text-gray-700">has invited you to join</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             Design Research
                                                         </a>
                                                         <span class="text-gray-700"></span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         4 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3286,27 +3286,27 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-2.5">
                                                 <div class="mb-1 flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Jane Perez
                                                         </a>
                                                         <span class="text-gray-700">added 2 new works to</span>
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active text-primary font-semibold"
+                                                            class="font-semibold text-primary hover:text-primary-active"
                                                         >
                                                             Inspirations 2024
                                                         </a>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         23 hours ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3316,7 +3316,7 @@ const showingNavigationDropdown = ref(false),
                                                 </div>
                                                 <div class="flex items-center gap-2.5">
                                                     <div
-                                                        class="card bg-light-active flex w-40 flex-col gap-3.5 shadow-none"
+                                                        class="card flex w-40 flex-col gap-3.5 bg-light-active shadow-none"
                                                     >
                                                         <div
                                                             class="card-rounded-t h-24 shrink-0 bg-cover bg-no-repeat"
@@ -3327,7 +3327,7 @@ const showingNavigationDropdown = ref(false),
                                                         <div class="px-2.5 pb-2">
                                                             <a
                                                                 href="#"
-                                                                class="hover:text-primary mb-0.5 block text-xs font-medium leading-4 text-gray-700"
+                                                                class="mb-0.5 block text-xs font-medium leading-4 text-gray-700 hover:text-primary"
                                                             >
                                                                 Geometric Patterns
                                                             </a>
@@ -3340,7 +3340,7 @@ const showingNavigationDropdown = ref(false),
                                                         </div>
                                                     </div>
                                                     <div
-                                                        class="card bg-light-active flex w-40 flex-col gap-3.5 shadow-none"
+                                                        class="card flex w-40 flex-col gap-3.5 bg-light-active shadow-none"
                                                     >
                                                         <div
                                                             class="card-rounded-t h-24 shrink-0 bg-cover bg-no-repeat"
@@ -3351,7 +3351,7 @@ const showingNavigationDropdown = ref(false),
                                                         <div class="px-2.5 pb-2">
                                                             <a
                                                                 href="#"
-                                                                class="hover:text-primary mb-0.5 block text-xs font-medium leading-4 text-gray-700"
+                                                                class="mb-0.5 block text-xs font-medium leading-4 text-gray-700 hover:text-primary"
                                                             >
                                                                 Artistic Expressions
                                                             </a>
@@ -3375,15 +3375,15 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-2.5">
                                                 <div class="mb-1 flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Natalie Wood
                                                         </a>
@@ -3391,7 +3391,7 @@ const showingNavigationDropdown = ref(false),
                                                             wants to edit marketing project
                                                         </span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         1 day ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3400,7 +3400,7 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center gap-1.5 rounded-lg p-2.5 shadow-none"
+                                                    class="card flex flex-row items-center gap-1.5 rounded-lg bg-light-active p-2.5 shadow-none"
                                                 >
                                                     <div
                                                         class="flex h-[30px] w-[26px] shrink-0 items-center justify-center rounded border border-gray-200 bg-white"
@@ -3409,7 +3409,7 @@ const showingNavigationDropdown = ref(false),
                                                     </div>
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active me-1 text-xs font-medium text-gray-700"
+                                                        class="me-1 text-xs font-medium text-gray-700 hover:text-primary-active"
                                                     >
                                                         User-feedback.jira
                                                     </a>
@@ -3442,21 +3442,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-2.5">
                                                 <div class="mb-1 flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Aaron Foster
                                                         </a>
                                                         <span class="text-gray-700">requested to view</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 day ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3465,10 +3465,10 @@ const showingNavigationDropdown = ref(false),
                                                     </span>
                                                 </div>
                                                 <div
-                                                    class="card bg-light-active flex flex-row items-center gap-1.5 rounded-lg px-2.5 py-1.5 shadow-none"
+                                                    class="card flex flex-row items-center gap-1.5 rounded-lg bg-light-active px-2.5 py-1.5 shadow-none"
                                                 >
-                                                    <i class="ki-filled ki-user-tick text-success text-base"></i>
-                                                    <span class="text-success text-2sm font-medium">
+                                                    <i class="ki-filled ki-user-tick text-base text-success"></i>
+                                                    <span class="text-2sm font-medium text-success">
                                                         You allowed Aaron to view
                                                     </span>
                                                 </div>
@@ -3483,23 +3483,23 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-1">
-                                                <div class="text-2sm mb-px font-medium">
+                                                <div class="mb-px text-2sm font-medium">
                                                     <a
                                                         href="#"
-                                                        class="hover:text-primary-active font-semibold text-gray-900"
+                                                        class="font-semibold text-gray-900 hover:text-primary-active"
                                                     >
                                                         Chloe Morgan
                                                     </a>
                                                     <span class="text-gray-700">posted a new article</span>
-                                                    <a href="#" class="hover:text-primary-active text-primary">
+                                                    <a href="#" class="text-primary hover:text-primary-active">
                                                         User Experience
                                                     </a>
                                                 </div>
-                                                <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                <span class="flex items-center text-2xs font-medium text-gray-500">
                                                     1 day ago
                                                     <span class="badge badge-circle mx-1.5 size-1 bg-gray-500"></span>
                                                     Nexus
@@ -3515,21 +3515,21 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1"
+                                                    class="badge badge-circle absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform bg-gray-400 ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex grow flex-col gap-2.5">
                                                 <div class="mb-1 flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Gabriel Bennett
                                                         </a>
                                                         <span class="text-gray-700">started connect you</span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         3 day ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3555,25 +3555,25 @@ const showingNavigationDropdown = ref(false),
                                                     class="size-8 rounded-full"
                                                 />
                                                 <span
-                                                    class="badge badge-circle badge-success ring-light absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1"
+                                                    class="badge badge-circle badge-success absolute end-0.5 top-7 size-1.5 -translate-y-1/2 transform ring-1 ring-light"
                                                 ></span>
                                             </div>
                                             <div class="flex flex-col gap-3.5">
                                                 <div class="flex flex-col gap-1">
-                                                    <div class="text-2sm mb-px font-medium">
+                                                    <div class="mb-px text-2sm font-medium">
                                                         <a
                                                             href="#"
-                                                            class="hover:text-primary-active font-semibold text-gray-900"
+                                                            class="font-semibold text-gray-900 hover:text-primary-active"
                                                         >
                                                             Thalia Fox
                                                         </a>
                                                         <span class="text-gray-700">has invited you to join</span>
-                                                        <a href="#" class="hover:text-primary-active text-primary">
+                                                        <a href="#" class="text-primary hover:text-primary-active">
                                                             Design Research
                                                         </a>
                                                         <span class="text-gray-700"></span>
                                                     </div>
-                                                    <span class="text-2xs flex items-center font-medium text-gray-500">
+                                                    <span class="flex items-center text-2xs font-medium text-gray-500">
                                                         4 days ago
                                                         <span
                                                             class="badge badge-circle mx-1.5 size-1 bg-gray-500"
@@ -3622,7 +3622,7 @@ const showingNavigationDropdown = ref(false),
                             <img
                                 src="assets/media/avatars/300-2.png"
                                 alt=""
-                                class="border-success size-9 shrink-0 rounded-full border-2"
+                                class="size-9 shrink-0 rounded-full border-2 border-success"
                             />
                         </div>
                         <div class="menu-dropdown menu-default light:border-gray-300 w-screen max-w-[250px]">
@@ -3631,7 +3631,7 @@ const showingNavigationDropdown = ref(false),
                                     <img
                                         src="assets/media/avatars/300-2.png"
                                         alt=""
-                                        class="border-success size-9 rounded-full border-2"
+                                        class="size-9 rounded-full border-2 border-success"
                                     />
                                     <div class="flex flex-col gap-1.5">
                                         <span class="text-sm font-semibold leading-none text-gray-800">
@@ -3639,7 +3639,7 @@ const showingNavigationDropdown = ref(false),
                                         </span>
                                         <a
                                             href="html/demo1/account/home/get-started.html"
-                                            class="hover:text-primary text-xs font-medium leading-none text-gray-600"
+                                            class="text-xs font-medium leading-none text-gray-600 hover:text-primary"
                                         >
                                             c.fisher@gmail.com
                                         </a>
@@ -3777,7 +3777,7 @@ const showingNavigationDropdown = ref(false),
                                         </span>
                                         <span class="menu-title">Language</span>
                                         <div
-                                            class="text-2xs flex shrink-0 items-center gap-1.5 rounded-md border border-gray-300 p-1.5 font-medium text-gray-600"
+                                            class="flex shrink-0 items-center gap-1.5 rounded-md border border-gray-300 p-1.5 text-2xs font-medium text-gray-600"
                                         >
                                             English
                                             <img
@@ -3799,7 +3799,7 @@ const showingNavigationDropdown = ref(false),
                                                 </span>
                                                 <span class="menu-title">English</span>
                                                 <span class="menu-badge">
-                                                    <i class="ki-solid ki-check-circle text-success text-base"></i>
+                                                    <i class="ki-solid ki-check-circle text-base text-success"></i>
                                                 </span>
                                             </a>
                                         </div>
@@ -3863,23 +3863,20 @@ const showingNavigationDropdown = ref(false),
                                         </span>
                                         <span class="menu-title">Dark Mode</span>
                                         <label class="switch switch-sm">
-                                            <input
-                                                type="checkbox"
-                                                value="1"
-                                                data-theme-state="dark"
-                                                data-theme-toggle="true"
-                                                name="check"
-                                            />
+                                            <input type="checkbox" :checked="isDark" @change="toggleDark()" />
                                         </label>
                                     </div>
                                 </div>
                                 <div class="menu-item px-4 py-1.5">
-                                    <a
-                                        href="html/demo1/authentication/classic/sign-in.html"
+                                    <Link
+                                        :href="route('logout')"
+                                        method="post"
+                                        as="button"
+                                        type="button"
                                         class="btn btn-sm btn-light justify-center"
                                     >
                                         Log out
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
