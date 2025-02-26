@@ -1,6 +1,6 @@
 <script setup>
 import Checkbox from '@/Components/Checkbox.vue'
-import GuestLayout from '@/Layouts/GuestLayout.vue'
+import AuthenticationBrandedLayout from '@/Layouts/AuthenticationBrandedLayout.vue'
 import InputError from '@/Components/InputError.vue'
 import InputLabel from '@/Components/InputLabel.vue'
 import PrimaryButton from '@/Components/PrimaryButton.vue'
@@ -31,7 +31,7 @@ const submit = () => {
 
 <template>
     <Head title="Log In" />
-    <GuestLayout>
+    <AuthenticationBrandedLayout>
         <div class="w-full max-w-sm space-y-10">
             <div class="space-y-2">
                 <h1 class="text-3xl/tight font-extrabold">Welcome!</h1>
@@ -97,5 +97,5 @@ const submit = () => {
                 </Link>
             </div>
         </div>
-    </GuestLayout>
+    </AuthenticationBrandedLayout>
 </template>
