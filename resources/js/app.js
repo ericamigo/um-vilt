@@ -1,7 +1,10 @@
 import '../css/app.css'
 import './bootstrap'
-import 'vue-toastification/dist/index.css'
-import 'floating-vue/dist/style.css'
+
+import '../metronic/js/core.bundle.js'
+import '../metronic/vendors/apexcharts/apexcharts.min.js'
+import '../metronic/js/widgets/general.js'
+import '../metronic/js/layouts/demo1.js'
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, router } from '@inertiajs/vue3'
@@ -46,3 +49,4 @@ router.on('success', function (e) {
         toast.error(e.detail.page.props.flash.error)
     }
 })
+
